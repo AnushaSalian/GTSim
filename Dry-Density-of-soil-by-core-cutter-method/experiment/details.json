@@ -1,0 +1,44 @@
+{
+
+   "details": [
+       {
+			"Experiment": "Dry density of soil by core cutter method",
+			"Lab": "Geotechnical Engineering Lab",
+			"Discipline": "Civil Engineering",
+			"Technology": "HTML, Javascript, CSS, JQuery, Inkscape"
+       }
+   ],
+
+   "developer": [
+       {
+      "Developer": "Dr. Pruthviraj U",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK, Surathkal"
+       }
+   ],
+
+   "contributer": [
+       {
+      "Contributer": "Nisha",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK, Surathkal"
+       },
+       {
+			"Contributer": "Anusha B Salian",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+			"InstituteAcronym": "NITK, Surathkal"
+       },
+      {
+			"Contributer": "Guruprasad T N",
+			"Institute": "National Institute of Technology Karnataka, Surathkal",
+			"InstituteAcronym": "NITK, Surathkal"
+       },
+
+       {
+			"Contributer": "Aishwarya Shetty",
+			"Institute": "National Institute of Technology Karnataka, Surathkal",
+			"InstituteAcronym": "NITK, Surathkal"
+       }
+   ]
+
+}

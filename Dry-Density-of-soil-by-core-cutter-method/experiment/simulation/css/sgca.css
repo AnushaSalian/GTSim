@@ -1,0 +1,706 @@
+#simscreen
+{
+position: relative;
+left:0px;
+top:0px;
+height: 600px; 
+width:800px;
+border:solid 1px;
+}
+
+#copyright{
+position: absolute;
+left:50px;
+top: 580px;
+font-family: verdana; 
+font-size:12px
+}
+
+#title{
+position:relative;
+left: 0px;
+top: 0px;
+height:40px;
+font-size: 22px;
+text-align:center;
+background-color: black;
+font-family: verdana;
+color: White;
+text-transform: uppercase; 
+}
+
+#title h3{
+padding-top:2px;
+margin:0px;}
+
+#question-div{
+	position: absolute;
+	left:300px;
+	top:350px;
+	width:300px;
+	height:120px;
+	border:solid 1px gray;
+	background-color: gray;
+	filter: alpha(opacity=55);
+	color:white;
+	visibility:hidden;
+}
+
+.simsubscreen
+{
+position:absolute;
+left: 50px;
+top: 50px;
+height:530px;
+width:745px;
+
+}
+
+.incanvas
+{
+margin:5px 0 0 5px;
+padding:0;
+}
+
+#nextButton{
+    position: absolute;
+    left: 750px;
+    top: 530px;
+cursor:pointer;
+}
+
+.steptext{
+display:inline;
+}
+
+.circlebg
+{
+border-radius:100%;
+font-size:25px;
+color:#fff;
+text-align:center;
+background:#000
+}
+
+.tooltip {
+  position: initial;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  color:red;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 100;t
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/* table {
+  font-family: verdana, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  
+  
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+  font-size:14px;
+} */
+/* step 1 */
+
+.clsBtn 
+{
+	border-style:double #010100;
+	border-radius :3px;
+	cursor:pointer;
+}
+
+
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus
+{
+	outline:none;
+}
+input[type=number] {
+	-moz-appearance: textfield;
+    }
+@-webkit-keyframes movescale {
+  from {left:120px; }
+  to {left:228px; }
+}
+@keyframes movescale {
+  from {left:120px; }
+  to {left:228px; }
+} 
+@-webkit-keyframes movescaleup {
+  from {left:228px; top: 90px;}
+  to {left:228px; top: 250px;}
+}
+@keyframes movescaleup {
+  from {left:228px; top: 90px;}
+  to {left:228px; top: 250px;}
+}
+/* step 2 */
+@-webkit-keyframes movecore {
+  from {left:200px; top: 270px;}
+  to {left:515px; top: 170px;}
+}
+@keyframes movecore {
+  from {left:200px; top: 270px;}
+  to {left:515px; top: 170px;}
+}
+/* step 3 */
+@-webkit-keyframes movecutter {
+  from { top: 165px}
+  to { top: 295px;}
+}
+
+@keyframes movecutter {
+  from { top: 165px;}
+  to { top: 295px;}
+}
+@-webkit-keyframes movecutterc {
+  from { top: 172px;}
+  to { top: 292px;}
+}
+@keyframes movecutterc {
+  from { top:172px;}
+  to { top: 292px;}
+}
+@-webkit-keyframes moveTrowel{
+  0% { left: 410px;top:200px; }
+  25% { left: 310px;top:240px;}
+  50% { left: 410px;top:240px;}
+  75% { left: 310px;top:280px;}
+  100% { left: 410px;top:280px; }
+}
+@keyframes moveTrowel{
+  0% { left: 410px;top:200px; }
+  25% { left: 310px;top:240px;}
+  50% { left: 410px;top:240px;}
+  75% { left: 310px;top:280px;}
+  100% { left: 410px;top:280px; }
+}
+/* @-webkit-keyframes movecutterte{ */
+  /* from {left: 310px;top:240px; } */
+  /* to { left: 410px;top:200px; } */
+/* } */
+
+/* @keyframes movecutterte { */
+  /* from {left: 310px;top:240px; } */
+  /* to {left: 410px;top:200px; } */
+/* } */
+/* @-webkit-keyframes movecuttertee{ */
+  /* from { left: 410px;top:210px; } */
+  /* to { left: 310px;top:240px;} */
+/* } */
+
+/* @keyframes movecuttertee { */
+  /* from { left: 410px;top:210px; } */
+  /* to {  left: 310px;top:240px; } */
+/* } */
+/* @-webkit-keyframes movecuttertq{ */
+  /* from { left: 410px;top:200px; } */
+  /* to { left: 310px;top:240px;} */
+/* } */
+
+/* @keyframes movecuttertq { */
+  /* from { left: 410px;top:200px; } */
+  /* to {  left: 310px;top:240px; } */
+/* } */
+/* @-webkit-keyframes movecutterti{ */
+  /* from {left: 310px;top:240px; } */
+  /* to { left: 410px;top:200px; } */
+/* } */
+
+/* @keyframes movecutterti { */
+  /* from {left: 310px;top:240px; } */
+  /* to {  left: 410px;top:200px; } */
+/* } */
+/* @-webkit-keyframes movecuttertz{ */
+  /* from { left: 410px;top:210px; } */
+  /* to { left: 310px;top:240px;} */
+/* } */
+
+@keyframes movecuttertz {
+  from { left: 410px;top:210px; }
+  to {  left: 310px;top:240px; }
+}
+
+/* step 4 */
+@-webkit-keyframes movehammer {
+  from { top: 80px;}
+  to { top: 163px;}
+}
+
+@keyframes movehammer {
+  from { top: 80px;}
+  to { top: 163px;}
+}
+/* step 5 */
+@-webkit-keyframes movehammercoreac {
+  from { top: 310px;}
+  to { top: 320px;}
+}
+
+@keyframes movehammercoreac {
+  from { top: 310px;}
+  to { top: 320px;}
+}
+
+@-webkit-keyframes movehammercoreah
+{
+	0% { transform: translate(0px, 0px) ; }
+ 50% { transform: translate(0px, -50px) ; }
+  100% { transform: translate(0px, 5px) ; }
+}
+
+@keyframes movehammercoreah
+{
+  0% { transform: translate(0px, 0px) ; }
+  50% { transform: translate(0px, -50px) ; }
+  100% { transform: translate(0px, 5px) ; }
+}
+
+@-webkit-keyframes movehammercoreahh{
+  0% { transform: translate(0px, 0px) ; }
+  50% { transform: translate(0px, -50px) ; }
+   100% { transform: translate(0px, 25px) ; }
+}
+
+@keyframes movehammercoreahh {
+  0% { transform: translate(0px, 0px) ; }
+  50% { transform: translate(0px, -50px) ; }
+   100% { transform: translate(0px, 25px) ; }
+}
+@-webkit-keyframes movehammercoreahhh{
+  0% { transform: translate(0px, 0px) ; }
+  50% { transform: translate(0px, -50px) ; }
+   100% { transform: translate(0px, 43px) ; }
+}
+
+@keyframes movehammercoreahhh {
+  0% { transform: translate(0px, 0px) ; }
+  50% { transform: translate(0px, -50px) ; }
+   100% { transform: translate(0px, 43px) ; }
+}
+
+.door
+{
+  background-color: white;
+  position:absolute;
+  top:158px;
+  left:20px;
+  width:200px;
+  height:175px;
+  /* border: 10px solid grey; */
+  border: 5px double black;
+  transform-origin: right;
+  /*Speed of the Door animation*/
+  transition: all 1.5s ease-in-out;
+}
+.doorOpen
+{
+  /*prespectiv creates the door open effect*/
+  transform: perspective(1200px) translateZ(0px) translateX(0px) translateY(0px) rotateY(125deg);
+}
+/* @-webkit-keyframes movehammercoreah{
+  from { top: 130px;}
+  to { top: 150px;}
+}
+
+@keyframes movehammercoreah {
+  from { top: 130px;}
+  to { top: 150px;}
+} */
+@-webkit-keyframes movehammercoreaco{
+  from {  top: 296px;}
+  to { top: 306px;}
+}
+@keyframes movehammercoreaco {
+  from {  top: 296px;}
+  to { top: 306px;}
+}
+/* 2 */
+@-webkit-keyframes movehammercoreacc {
+  from { top: 330px;}
+  to { top: 340px;}
+}
+
+@keyframes movehammercoreacc {
+  from { top: 330px;}
+  to { top: 340px;}
+}
+
+@-webkit-keyframes movehammercoreacoo{
+  from {  top: 316px;}
+  to { top: 326px;}
+}
+@keyframes movehammercoreacoo {
+  from {  top: 316px;}
+  to { top: 326px;}
+}
+/* 3 */
+@-webkit-keyframes movehammercoreaccc {
+  from { top: 350px;}
+  to { top: 353px;}
+}
+
+@keyframes movehammercoreaccc {
+  from { top: 350px;}
+  to { top: 353px;}
+}
+
+@-webkit-keyframes movehammercoreacooo{
+  from {  top: 336px;}
+  to { top: 339px;}
+}
+@keyframes movehammercoreacooo {
+  from {  top: 336px;}
+  to { top: 339px;}
+}
+
+@-webkit-keyframes movev{
+  from {  top: 100px;}
+  to { top: 203px;}
+}
+@keyframes movev {
+  from {  top: 100px;}
+  to { top: 203px;}
+}
+@-webkit-keyframes movev1{
+  from {  left: 350px;}
+  to { left: 318px;}
+}
+@keyframes movev1 {
+  from {  left: 350px;}
+  to { left: 318px;}
+}
+/* @-webkit-keyframes movehammercoreac { */
+  /* from { top: 310px;} */
+  /* to { top: 330px;} */
+/* } */
+/* @keyframes movehammercoreac { */
+  /* from { top:310px;} */
+  /* to { top: 330px;} */
+/* } */
+/* @-webkit-keyframes movehammercoreah{ */
+  /* from { top: 130px;} */
+  /* to { top: 160px;} */
+/* } */
+
+/* @keyframes movehammercoreah { */
+  /* from { top: 130px;} */
+  /* to { top: 160px;} */
+/* } */
+/* @-webkit-keyframes movehammercoreaco{ */
+  /* from {  top: 296px;} */
+  /* to { top:316px;} */
+/* } */
+/* @keyframes movehammercoreaco { */
+  /* from {  top:296px;} */
+  /* to { top: 316px;} */
+/* } */
+/* 2 */
+/* @-webkit-keyframes movehammercoreacc { */
+  /* from { top: 330px;} */
+  /* to { top: 350px;} */
+/* } */
+
+/* @keyframes movehammercoreacc { */
+  /* from { top: 330px;} */
+  /* to { top: 350px;} */
+/* } */
+/* @-webkit-keyframes movehammercoreahh{ */
+  /* from { top: 133px;} */
+  /* to { top: 296px;} */
+/* } */
+
+/* @keyframes movehammercoreahh { */
+  /* from { top: 133px;} */
+  /* to { top: 296px;} */
+/* } */
+/* @-webkit-keyframes movehammercoreacoo{ */
+  /* from {  top: 296px;} */
+  /* to { top: 326px;} */
+/* } */
+/* @keyframes movehammercoreacoo { */
+  /* from {  top: 296px;} */
+  /* to { top: 326px;} */
+/* } */
+/* 3 */
+/* @-webkit-keyframes movehammercoreaccc { */
+  /* from { top: 340px;} */
+  /* to { top: 360px;} */
+/* } */
+
+/* @keyframes movehammercoreaccc { */
+  /* from { top: 340px;} */
+  /* to { top: 360px;} */
+/* } */
+/* @-webkit-keyframes movehammercoreahhh{ */
+  /* from { top:123px;} */
+  /* to { top: 326px;} */
+/* } */
+
+/* @keyframes movehammercoreahhh { */
+  /* from { top:123px;} */
+  /* to { top: 326px;} */
+/* } */
+/* @-webkit-keyframes movehammercoreacooo{ */
+  /* from {  top: 326px;} */
+  /* to { top: 346px;} */
+/* } */
+/* @keyframes movehammercoreacooo { */
+  /* from {  top: 326px;} */
+  /* to { top: 346px;} */
+/* } */
+/* step 6 */
+
+
+.tooltip {
+  position: initial;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  color:red;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 500px;
+  background-color: black;
+  color: #fff;  padding: 5px 10px 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 100;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@-webkit-keyframes movehammerc1 {
+  from { top: 370px;}
+  to { top: 330px;}
+}
+
+@keyframes movehammerc1 {
+  from { top: 370px;}
+  to { top: 330px;}
+}
+
+
+
+@-webkit-keyframes movehammerh1{
+  from { top: 210px;}
+  to { top: 90px;}
+}
+
+@keyframes movehammerh1 {
+  from { top: 210px;}
+  to { top: 90px;}
+}
+@-webkit-keyframes movehammerco1{
+  from { top: 357px;}
+  to { top: 315px;}
+}
+
+@keyframes movehammerhco1 {
+  from { top: 357px;}
+  to { top: 315px;}
+}
+
+/* step 7 */
+@-webkit-keyframes movecorecc {
+  from {left:200px; top: 240px;}
+  to {left:515px; top: 175px;}
+}
+
+@keyframes movecorecc {
+  from {left:200px; top: 240px;}
+  to {left:515px; top: 175px;}
+}
+@-webkit-keyframes movecorecco{
+  from { top: 215px;}
+  to { top: 120px;}
+}
+
+@keyframes movecorecco {
+  from { top: 215px;}
+  to { top: 120px;}
+}
+
+@-webkit-keyframes moves{
+  from { left: 480px; top:255px;}
+  to { left: 310px;top:190px;}
+}
+
+@keyframes moves{
+  from { left: 480px; top: 255px;}
+  to { left: 310px;top:190px;}
+}
+@-webkit-keyframes rotates{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(-80deg)}
+}
+@keyframes rotates{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(-80deg)}
+}
+@-webkit-keyframes movs{
+  from { left: 350px; top: 320px;}
+  to { left: 250px;top:270px;}
+}
+@keyframes movs{
+  from { left: 350px; top: 320px;}
+  to { left: 250px;top:270px;}
+}
+@-webkit-keyframes movss{
+  from {left: 250px;top:270px; }
+  to { left: 320px; top: 270px;}
+}
+@keyframes movss{
+  from { left: 250px;top:270px;}
+  to { left: 320px; top: 270px;}
+}
+@-webkit-keyframes movsss{
+  0% {left:350px; top: 320px; }
+  50% {left:270px; top: 270px; }
+  100% {left: 230px; top: 270px;}
+}
+@keyframes movsss{
+  0% {left:350px; top: 320px; }
+  50% {left:270px; top: 270px; }
+  100% {left: 230px; top: 270px;}
+}
+
+@-webkit-keyframes mov{
+  from { left: 230px; top: 270px}
+  to { left: 110px;top:280px;}
+}
+@keyframes mov{
+  from { left: 230px; top: 270px}
+  to { left: 110px;top:280px;}
+}
+/* for moving the bowl */
+@-webkit-keyframes movecorecck {
+  from {left:200px; top: 355px;}
+  to {left:530px; top: 225px;}
+}
+
+@keyframes movecorecck {
+  from {left:200px; top: 355px;}
+  to {left:530px; top: 225px;}
+}
+
+@-webkit-keyframes rotates1 {
+  from {left: 480px; top: 255px;}
+  to {left: 340px; top:190px;}
+}
+
+@keyframes rotates1 {
+  from {left: 480px; top: 255px;}
+  to {left: 340px; top:190px;}
+}
+
+
+/* step 8 */
+
+@-webkit-keyframes movecoread{
+  from { left: 140px;}
+  to { left: 320px;}
+}
+
+@keyframes movecoread {
+  from { left: 140px;}
+  to { left: 320px;}
+}
+@-webkit-keyframes movecoreacu{
+  from { top: 420px;}
+  to { top: 190px;}
+}
+
+@keyframes movecoreacu {
+  from { top: 420px;}
+  to { top: 190px;}
+}
+
+@-webkit-keyframes moveq{
+  from { top: 180px;}
+  to { top: 420px;}
+}
+
+@keyframes moveq {
+  from { top: 180px;}
+  to { top: 420px;}
+}
+
+
+@-webkit-keyframes movecoreadd{
+  from { left: 320px;}
+  to { left: 140px;}
+}
+
+@keyframes movecoreadd {
+  from { left: 320px;}
+  to { left: 140px;}
+}
+@-webkit-keyframes movecoreauu{
+  from { left: 370px;}
+  to { left: 520px;}
+}
+
+@keyframes movecoreauu {
+  from { left: 370px;}
+  to { left: 520px;}
+}
+/* for moving the bowl with soil */
+@-webkit-keyframes movecorecckk {
+  from {left:200px; top: 350px;}
+  to {left:530px; top: 225px;}
+}
+
+@keyframes movecorecckk {
+  from {left:200px; top: 350px;}
+  to {left:530px; top: 225px;}
+}
+/* step10 */
+@-webkit-keyframes moveco {
+  from {left:200px; top: 355px;}
+  to {left:530px; top: 208px;}
+}
+
+@keyframes moveco {
+  from {left:200px; top: 355px;}
+  to {left:530px; top: 208px;}
+}
+.tooltip1 {
+  display: none;
+  padding: 5px;
+
+}
+.input:hover .tooltip1 {
+  background: black;
+  border-radius: 3px;
+  bottom: 30px;
+  color: white;
+  display: inline;
+  height: 20px;
+  left: 0;
+  line-height: 20px;
+
+}
+

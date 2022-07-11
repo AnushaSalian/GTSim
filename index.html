@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Geotech Lab</title>
+<style>
+.HorizontalNavBar
+{
+	position:fixed;
+	left:0;
+	top:0;
+	width:17%;
+	height:100%;
+	border:2px solid black;	
+	padding:5px;
+	overflow:scroll;
+}
+.main{
+	position:fixed;
+	left:18%;
+	top:0;
+	width:83%;
+	height:100%;
+	padding-left:50px;
+	overflow:auto;
+}
+p{
+ background-color:transparent;
+ border:none;
+ cursor:pointer;
+}
+p:hover 
+{
+ background-color:#FFF8DC;
+ color:orange;
+ font-weight:bold;
+}
+</style>
+<script>
+function displaySimulation(exp)
+{
+	document.getElementById("sim").style.display="block";
+	document.getElementById("sim").src=exp;
+}
+</script>
+</head>
+<body onload="alerting()">
+<div class="HorizontalNavBar">
+	<span>
+	<h3>Experiment list</h3>
+	<ol>
+		<!-- <li><p id="introductionToLadderLogic/andLogic/index.html" onclick="displaySimulation(id)">Consolidation</p></li> -->
+		<!-- <li><p id="introductionToLadderLogic/nandLogic/index.html" onclick="displaySimulation(id)">Vane shear test</p></li> -->
+		<li><p id="Dry-Density-of-soil-by-core-cutter-method/experiment/simulation/index.html" onclick="displaySimulation(id)">Dry density by core cutter method</p></li>
+		<li><p id="OnlySimulation/sandReplacementMethod/index.html" onclick="displaySimulation(id)">Dry density by sand replacement method</p></li>
+		<li><p id="OnlySimulation/shrinkageLimitTest/index.html" onclick="displaySimulation(id)">Shrinkage limit test</p></li>
+		<li><p id="Standard-Proctor-Compaction-test/experiment/simulation/proctor.html" onclick="displaySimulation(id)">Standard Proctor test</p></li>
+		<li><p id="Liquid-limit-plastic-limit/experiment/simulation/index.html" onclick="displaySimulation(id)">Liquid limit and plastic limit</p></li>
+		<li><p id="OnlySimulation/vaneShearTest/index.html" onclick="displaySimulation(id)">Vane Shear Test</p></li>
+		<li><p id="OnlySimulation/consolidation/index.html" onclick="displaySimulation(id)">Consolidation <span style="color:red; font-style:italic; font-size:11px;">(Not completed)</span></p></li>
+		
+	</ol>
+	
+</div>
+<div class="main" style="background-color:#FFFFFF;">
+	<iframe id="sim" style="border:none; position:absolute; top:0px; width:980px; height:650px; display:none;">Click on the experiment name in the navigation bar to view the silmulation</iframe>
+</div>
+</body
+</html>
