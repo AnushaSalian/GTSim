@@ -4,9 +4,12 @@
 <meta charset="UTF-8">
 <title>SOLVE</title>
 <script language="JavaScript" type="text/javascript" src="js/jquerymin.js"></script>
-<script type="text/javascript" src= "js/ej.web.all.js"></script>
+<!-- <script type="text/javascript" src= "js/ej.web.all.js"></script> -->
 <link rel="stylesheet" href="css/consol.css" />
-<script type="text/javascript" src="js/consol.js"></script>
+<script defer type="text/javascript" src="js/CanvasJS-graph.js"></script> <!-- CanvasJs.com canvasJs library-->
+<script defer type="text/javascript" src="js/logTMethodGraph.js"></script> <!-- Graph code created using CanvasJs.com-->
+<script defer type="text/javascript" src="js/rootTMethodGraph.js"></script> <!-- Graph code created using CanvasJs.com-->
+<script defer type="text/javascript" src="js/consol.js"></script>
 <script>
 var simsubscreennum=0;
 var temp=0;
@@ -204,101 +207,115 @@ var temp=0;
 <div id="canvas12" class="simsubscreen" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;12&nbsp;</span>
-	<p class="steptext">&nbsp; Apply the load to the assembly and note the initial settlement.</p>
+	<p class="steptext">&nbsp; Apply the load to the assembly and note the initial settlement. Start the stopwatch simultaneously and take the dial gauge readings at regular intervals, until 90% consolidation is reached, i.e., within 24 hours.</p>
 	<img id="12-1" style="position:absolute; left:60px; top:65px;" src="images/fullSetup.png" />
-	<img id="12-2" style="position:absolute; left:450px; top:470px;" src="images/initialWeight.png" />
+	<img id="12-2" style="position:absolute; left:450px; top:470px; cursor:pointer;" src="images/initialWeight.png" />
 	<div id="12-3" style=""></div>
-	<!-- <img id="12-2" style="position:absolute; left:112.5px; top:465.5px;" src="images/weight.png" /> -->
-	<!-- <img id="12-2" style="position:absolute; left:112.5px; top:460.5px;" src="images/weight.png" /> -->
-	<!-- <img id="12-2" style="position:absolute; left:112.5px; top:455.5px;" src="images/weight.png" /> -->
+	<img id="12-4" style="position:absolute; left:315px; top:70px; width:135px; visibility:hidden;" title="Zoomed view of dial guage" src="images/zoomedDialGuage.png" />
+	<img id="12-5" style="position:absolute; left: 366px; top: 120px; width: 5px; visibility:hidden;  transform:rotate(0deg);" title="Zoomed view of dial guage" src="images/smallNeedle.png" />
+	<img id="12-6" style="position:absolute; left: 378px; top: 95px; width: 10px; visibility:hidden; transform:rotate(0deg);" title="Zoomed view of dial guage" src="images/bigNeedle.png" />
+	<p id="p12-1" style="position:absolute; left:300px; top:215px; font-size:12px; color:red; visibility:hidden;">Zoomed view of dial guage</p>
+	<img id="12-7" style="position:absolute; left: 540px; top: 70px; width:120px;  visibility:hidden;"  title="stopwatch" src="images/clock.png" />
+	<img id="12-8" style="position:absolute; left: 595px; top: 81px; width:9px; visibility:hidden;" src="images/needle.png" />
+	<p id="p12-2" style="position:absolute; left: 570px; top: 190px; font-size:12px; color:red; visibility:hidden;">Stopwatch <span style=" font-size:9px;">&nbsp;(3x faster)</span></p>
+	
+	<div id="tabDiv12" style="overflow-y:auto; position:absolute; left:300px; top:250px; height:230px; visibility:hidden;">
+	<table id="tab12" style="font-size:12px; border:1px solid black; text-align:center;">
+		<tr style="border:1px solid black; ">
+			<th style="border:1px solid black; padding:5px; ">Elapsed time (min)</th>
+			<th style="border:1px solid black; padding:0 35px; ">√t</th>
+			<th style="border:1px solid black; padding:5px;">Dial gauge reading (div)</th>
+		</tr>
+		<!-- <tr style="border:1px solid black; "> -->
+			<!-- <td style="border:1px solid black; padding:5px; ">0</td> -->
+			<!-- <td style="border:1px solid black; padding:0 35px; ">0</td> -->
+			<!-- <td style="border:1px solid black; padding:5px;">430</td> -->
+		<!-- </tr> -->
+	</table>
+	</div>
 </div>
 
 <div id="canvas13" class="simsubscreen" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;13&nbsp;</span>
-	<p class="steptext">&nbsp; Start the stopwatch simultaneously and take the dial gauge readings at regular intervals, until 90% consolidation is reached, i.e., within 24 hours.</p>
-	<img id="12-1" style="position:absolute; left:60px; top:65px;" src="images/fullSetup.png" />
-	<!-- <img id="12-2" style="position:absolute; left:112.5px; top:465.5px;" src="images/weight.png" /> -->
-	<!-- <img id="12-2" style="position:absolute; left:112.5px; top:460.5px;" src="images/weight.png" /> -->
-	<!-- <img id="12-2" style="position:absolute; left:112.5px; top:455.5px;" src="images/weight.png" /> -->
-	<img id="12-2" style="position:absolute; left:600px; top:80px; width:15%;" src="images/clock.png" />
-	<img id="12-2" style="position:absolute; left:652px; top:95px;  width:8px;" src="images/needle.png" />
-</div>
-
-<div id="canvas14" class="simsubscreen" style="visibility:hidden;">
-	<h3 style="position:absolute; left:100px; top:70px;">&nbsp;Observations : </h3>
-	<table style="position:absolute; left:115px; top:120px; border:1px solid black; font-size:14px;  text-align:left; width:60%;">
-	<tr>
-	<td style="border:1px solid black; padding:5px;">Trial No.</td>
-	<td style="border:1px solid black; padding:10px;">1</td>
-	</tr>
-	<tr>
-	<td style="border:1px solid black; padding:5px;">Initial angle of twist</td>
-	<td id="t11-1" style="border:1px solid black; padding:10px;"></td>
-	</tr>
-	<tr>
-	<td style="border:1px solid black; padding:5px;">Final angle of twist</td>
-	<td id="t11-2" style="border:1px solid black; padding:10px;"></td>
-	</tr>
-	<tr>
-	<td style="border:1px solid black; padding:5px;">Angle of twist</td>
-	<td id="t11-3" style="border:1px solid black; padding:10px;"></td>
-	</tr>
-	</table>
-</div>
-
-<div id="canvas12" class="simsubscreen" style="visibility:hidden;">
-	<h1 id="h12-1" style="position:absolute; left:0px; top:215px; color:grey; text-align:center; display:none;">Repeat the procedure for 2 more trials </h1>
-</div>
-
-<div id="canvas13" class="simsubscreen" style="visibility:hidden;">
-	<h3 style="position:absolute; left:40px; top:70px;">&nbsp;Observations : </h3>
-	<table id="totalTable" style="position:absolute; left:60px; top:130px; border:1px solid black; font-size:14px;  text-align:center; ">
-		<tr>
-			<td style="border:1px solid black; padding:5px;">Trial No.</td>
-			<td style="border:1px solid black; padding:5px;">Initial angle of twist</td>
-			<td style="border:1px solid black; padding:5px;">Final angle of twist</td>
-			<td style="border:1px solid black; padding:5px;">Angle of twist</td>
+	<h3 class="steptext" style="font-size:20px;">&nbsp;Observations : </h3>
+	<table id="tab13" style="position:absolute; left:0px; top:60px;font-size:12px; border:1px solid black; text-align:center; width:300px;">
+		<tr style="border:1px solid black; ">
+			<th style="border:1px solid black; padding:5px; ">Elapsed time (min)</th>
+			<th style="border:1px solid black; padding:0 35px; ">√t</th>
+			<th style="border:1px solid black; padding:5px;">Dial gauge reading (div)</th>
 		</tr>
 	</table>
-</div>
-
-<div id="canvas14" class="simsubscreen"  style="visibility:hidden">
-	<center><h2 id="step16" style="font-family:verdana;  position:absolute; left:200px; top:10px; ">Characteristic Curve<h2></center></p>
-	<div id="chartContainer" style="position:absolute; height: 410px; width: 560px; left:50px; top:70px;"></div> 
-</div>
-
-<div id="canvas15" class="simsubscreen" style="visibility:hidden;">
-	<h3 style="position:absolute; left:-50px; top:-20px;">&nbsp;Observations : </h3>
-	<table id="totalTable2" style="position:absolute; left:-40px; top:30px; border:1px solid black; font-size:14px;  text-align:center; ">
-		<tr>
-			<td style="border:1px solid black; padding:5px;">Trial No.</td>
-			<td style="border:1px solid black; padding:5px;">Initial angle of twist</td>
-			<td style="border:1px solid black; padding:5px;">Final angle of twist</td>
-			<td style="border:1px solid black; padding:5px;">Angle of twist, &theta; (deg)</td>
-			<td style="border:1px solid black; padding:5px;">Torque, T (g/m)</td>
-			<td style="border:1px solid black; padding:5px;">Undrained shear strength,</br> 
-				 T<sub>f</sub> (g/cm<sup>2</sup>) = <span class="frac"><sup>T</sup><span>&frasl;</span><sub>[&pi;d<sup>2</sup>(<span class="frac"><sup>H</sup><span>&frasl;</span><sub>2</sub></span> + <span class="frac"><sup>D</sup><span>&frasl;</span><sub>6</sub></span>)] </sub></span>	
-			</td>
-			<td style="border:1px solid black; padding:5px;">Undrained shear strength,</br>
-				 T<sub>f</sub> (KN/cm<sup>2</sup>) =<br> T<sub>f</sub> (g/cm<sup>2</sup>)x0.0981
-			</td>
-		</tr>	
-	</table>
-	
-	<button id="check" class="clsBtn" style="position:absolute; left:350px; top:290px;">CHECK</button>
-	<button id="result" class="clsBtn" style="position:absolute; left:430px; top:290px;">RESULT</button>
-	
-	&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red;left:-40px; top:310px; cursor:pointer;"><strong>Variables used in calculation</strong>
-		<span  class="tooltiptext" style="font-size:14px; text-align:justify;">
-			 Diameter of metal tube, d = 3.8cm<br><br>
-			 Height of metal tube, h = 7.5cm<br><br>
-			 Volume of the metal tube, V = <span class="frac"><sup>&pi;d<sup>2</sup>h</sup><span>&frasl;</span><sub>4</sub></span> = 85.06cm<sup>3</sup> <br><br>
-			 Height of vane, H = 1.25cm<br><br>
-			 Diameter of vane, D  = 1.25cm
-		</span>
+	<span class="tooltip" style="border-bottom:1px dotted; position:absolute; left:350px; top:60px; cursor:pointer;"><strong>Variables used in calculation</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; width: 300px; left:25px;">
+	<p>Height of soil specimen, H = 2cm</p>
+	<p>Change in height of soil specimen,<br> ΔH = (Initial - Final dial gauge reading) x Least count of dial gauge</p>
+	<p>Least count of dial gauge = 0.001</p>
+	</span></span>
+	<div style="position:absolute; left:350px; top:90px;"><h3 >Calculation : </h3>
+	<span style="font-size:14px;">Drainage path, d = <span class="frac"><sup>H - <span class="frac"><sup>ΔH</sup><span>&frasl;</span><sub>2</sub></span></sup><span>&frasl;</span><sub>2</sub></span>
+	<span style="position:absolute; left:125px; top:130px;">= &nbsp;<input id="dp" type="text" style="width:45px; width:50px; border:none; border-bottom:2px solid black;" required></span>
+	<span id="mark13" class="markHidden" style="position:absolute; left:210px; top:127px; font-size:20px; "></span>
+	<button id="check13" class="clsBtn" style="position:absolute; left:230px; top:125px;">CHECK</button>
+	<button id="result13" class="clsBtn" style="position:absolute; left:290px; top:125px;">RESULT</button>
 	</span>
-	<p id="p15-1" style="visibility:hidden; position:absolute; left:-30px; top:360px; font-size:14px; text-align:justify;"><b style="font-size:18px;"> Inference: </b><br><br>Vane shear test is one of the most commonly used in situ tests conducted to determine the unconfined shear strength of clay in its site conditions.</p>
+	</div>
+</div>
+
+<div class="simsubscreen" id="canvas14" style="visibility:hidden">
+	<center><h2 id="step14" style="font-family:verdana;  position:absolute; left:200px; top:-10px; ">Characteristic Curve<h2></center>
+	<p id="p14-1" style=" position:absolute; left:260px; top:42.5px; font-size:14px; border-bottom:2px solid black; font-weight:bold;">Log t method</p>
+	<div id="chartContainer" style="height: 400px; width: 700px; margin-left:-20px; margin-right:100px; margin-top:95px"></div> 
+	
+	<div style="  position:absolute; left:575px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	<div style="  position:absolute; left:-25px; top:455px; background-color:white; width:120px; height:60px;"></div>
+</div>
+
+<div class="simsubscreen" id="canvas15" style="visibility:hidden">
+	<h2 style="font-family:verdana;  position:absolute; left:10px; top:20px; ">Calculations</h2>
+	<span class="tooltip" style="border-bottom:1px dotted; position:absolute; left:10px; top:250px; cursor:pointer;"><strong>Variables used in calculation</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; width:400px; left:90%;">
+	<p>Time factor, T<sub>v</sub>50 = 0.1963</p>
+	<p>Time corresponding to 50% consolidation, t<sub>50</sub> = 1.5min</p>
+	<p>Drainage path, d = 0.983</p>
+	</span></span>
+	
+	<div style="position:absolute; left:10px; top:120px;">
+	<span style="font-size:14px;">Coefficient of consolidation, C<sub>v</sub> = <span class="frac"><sup>T<sub>v</sub>50 x d<sup>2</sup> </sup><span>&frasl;</span><sub>t<sub>50</sub></sub></span>
+	<span style="position:absolute; left:222.5px; top:80px;">= &nbsp;<input id="cv" type="text" style="width:45px; width:50px; border:none; border-bottom:2px solid black;" required><span style="position:absolute; left:77.5px; top:-1px;">cm<sup>2</sup>/sec</span></span>
+	<span id="mark15" class="markHidden" style="position:absolute; left:370px; top:77.5px; font-size:20px; "></span>
+	<button id="check15" class="clsBtn" style="position:absolute; left:400px; top:77px;">CHECK</button>
+	<button id="result15" class="clsBtn" style="position:absolute; left:455px; top:77px;">RESULT</button>
+	</span>
+	</div>
+</div>
+
+<div class="simsubscreen" id="canvas16" style="visibility:hidden">
+	<center><h2 id="step16" style="font-family:verdana;  position:absolute; left:200px; top:-10px; ">Characteristic Curve<h2></center>
+	<p id="p16-1" style=" position:absolute; left:290px; top:42.5px; font-size:14px; border-bottom:2px solid black; font-weight:bold;">&Sqrt;t method</p>
+	<div id="chartContainer16" style="height: 400px; width: 700px; margin-left:-20px; margin-right:100px; margin-top:95px"></div> 
+	
+	<div style="  position:absolute; left:575px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	<div style="  position:absolute; left:-25px; top:455px; background-color:white; width:120px; height:60px;"></div>
+</div>
+
+<div class="simsubscreen" id="canvas17" style="visibility:hidden">
+	<h2 style="font-family:verdana;  position:absolute; left:10px; top:20px; ">Calculations</h2>
+	<span class="tooltip" style="border-bottom:1px dotted; position:absolute; left:10px; top:250px; cursor:pointer;"><strong>Variables used in calculation</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; width:400px; left:90%;">
+	<p>Time factor, T<sub>v</sub>90 = 0.845</p>
+	<p>Time corresponding to 90% consolidation, t<sub>90</sub> = 5.29min</p>
+	<p>Drainage path, d = 0.983</p>
+	</span></span>
+	
+	<div style="position:absolute; left:10px; top:120px;">
+	<span style="font-size:14px;">Coefficient of consolidation, C<sub>v</sub> = <span class="frac"><sup>T<sub>v</sub>90 x d<sup>2</sup> </sup><span>&frasl;</span><sub>t<sub>90</sub></sub></span>
+	<span style="position:absolute; left:222.5px; top:80px;">= &nbsp;<input id="rootTcv" type="text" style="width:45px; width:50px; border:none; border-bottom:2px solid black;" required><span style="position:absolute; left:77.5px; top:-1px;">cm<sup>2</sup>/sec</span></span>
+	<span id="mark17" class="markHidden" style="position:absolute; left:370px; top:77.5px; font-size:20px; "></span>
+	<button id="check17" class="clsBtn" style="position:absolute; left:400px; top:77px;">CHECK</button>
+	<button id="result17" class="clsBtn" style="position:absolute; left:455px; top:77px;">RESULT</button>
+	</span>
+	</div>
 </div>
 
 <div id="questDiv" style="position:absolute; font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden;">

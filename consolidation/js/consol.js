@@ -1,5 +1,6 @@
 //Elapsed time  (min), √t, Dial gauge reading (div)
-var dataset=[[0.00, 0, 430],
+const dataset=[
+			[0.00, 0, 430],
 			[0.25, 0.5, 422],
 			[1.00, 1, 408],
 			[2.25, 1.5, 392],
@@ -13,14 +14,16 @@ var dataset=[[0.00, 0, 430],
 			[36.00, 6, 363],
 			[49.00, 7, 363],
 			[64.00, 8, 363],
-			[81.00, 9, 362]];
-			
-var repeat=0;
+			[81.00, 9, 363]];
+
+// degreeDataset and speedTimingDataset created by me for calcution purpose in coding
+const degreeDataset=[30,22,8,92,81,73,69,66,65,64,63,63,63,63,63];
+const speedTimingDataset=[0,15,45,75,105,135,165,195,225,255,285,660,780,900,1020];
 
 // $(function()
 // {
 	// $('input').on('input', function() {
-		// this.value = this.value.match(/\d*(\.\d*)?/)[0];
+		// this.value = this.value.match(/\correctAnswer*(\.\correctAnswer*)?/)[0];
 	// });
 // });
 
@@ -71,77 +74,26 @@ function validateFormativeQA(qn,ans,left,top)
 	}
 }
 
-function create_totalTable(arr) 
+function create_totalTable(time,tabId) 
 {
-	var j=0;
-    var table = document.getElementById("totalTable");
-    for(var i=2;i>=0;i--)
+	let j=1;
+    let table = document.getElementById(tabId);
+    for(let i=dataset.length-1;i>0;i--)
     {
-		$("#totalTable").delay()
+		$("#"+tabId).delay(time)
 		.queue(function (create_totalTable) 
 		{
-			$(this).append("<tr><td style=\"border:1px solid black; padding:5px;\">" + (j+1) + "</td><td style=\"border:1px solid black; padding:5px;\">" + dataset[0][arr[j]] + "</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[1][arr[j]] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ (dataset[1][arr[j]] - dataset[0][arr[j]]) +"</td></tr>");
+			$(this).append("<tr><td style=\"border:1px solid black; padding:5px;\">" + dataset[j][0]  + "</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[j][1] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[j][2]  +"</td></tr>");
 			j++;
-			create_totalTable(arr);
+			// time=dataset[j][0]*60*1000;
+			create_totalTable(time);
         });
 	}
 }
-
-function create_totalTable2(arr) 
-{
-	var j=0;
-    var table = document.getElementById("totalTable2");
-    for(var i=2;i>=0;i--)
-    {
-		$("#totalTable2").delay()
-		.queue(function (create_totalTable2) 
-		{
-			$(this).append("<tr><td style=\"border:1px solid black; padding:5px;\">" + (j+1) + "</td><td style=\"border:1px solid black; padding:5px;\">" + dataset[0][arr[j]] + "</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[1][arr[j]] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ (dataset[1][arr[j]] - dataset[0][arr[j]]) +"</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[2][arr[j]] +"</td><td style=\"border:1px solid black; padding:5px;\"><input type=\"text\" style=\"width:50px;\"></td><td style=\"border:1px solid black; padding:5px;\"><input type=\"text\" style=\"width:50px;\"></td></tr>");
-			j++;
-			create_totalTable2(arr);
-        });
-	}
-}
-
-let h=7.5, d=3.8, H=1.25, D=1.25;
-function create_totalTable3(arr) 
-{
-	var j=0;
-    var table = document.getElementById("totalTable2");
-	let tf=0;
-    for(var i=2;i>=0;i--)
-    {
-		$("#totalTable2").delay()
-		.queue(function (create_totalTable3) 
-		{
-			tf=(((dataset[2][arr[j]])/(Math.PI*d*d*((H/2)+(D/6))))*10).toFixed(2);
-			//=(E9/((22/7)*B4*B4*((0.5*B5)+(B4/6))))
-			console.log(tf);
-			$(this).append("<tr><td style=\"border:1px solid black; padding:5px;\">" + (j+1) + "</td><td style=\"border:1px solid black; padding:5px;\">" + dataset[0][arr[j]] + "</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[1][arr[j]] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ (dataset[1][arr[j]] - dataset[0][arr[j]]) +"</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[2][arr[j]] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ tf +"</td><td style=\"border:1px solid black; padding:5px;\">"+ (tf*0.0981).toFixed(2) +"</td></tr>");
-			j++;
-			create_totalTable3(arr);
-        });
-	}
-	setTimeout(function()
-	{
-		document.getElementById("p15-1").style.visibility="visible";
-	},1000);
-}
-
-function clearTableRows(tableId)
-{
-	var rows = document.getElementById(tableId).rows;
-	var i = rows.length;
-	while (--i) 
-	{
-		rows[i].parentNode.removeChild(rows[i]);
-	}
-}
-
 
 function navNext()
 {
-	for(temp=0;temp<15;temp++)
+	for(temp=0;temp<17;temp++)
 	{
 		document.getElementById("canvas"+temp).style.visibility="hidden";
 	}
@@ -159,31 +111,193 @@ function animatearrow()
         document.getElementById('arrow1').style.visibility="hidden";
 }
 
-function highlight(id)
-{
-    if (document.getElementById(id).style.visibility=="hidden")
-        document.getElementById(id).style.visibility="visible";
-    else
-        document.getElementById(id).style.visibility="hidden";
-}
-
 function myStopFunction() 
 {
      clearInterval(myInt);
      document.getElementById('arrow1').style.visibility="hidden";
 }
 
-function blinkArrow(l,t,d,h)
+function blinkArrow(l,t,correctAnswer,h)
 {
 	myInt = setInterval(function(){ animatearrow(); }, 500);
 	document.getElementById('arrow1').style="visibility:visible ;position:absolute; left:"+l+"px; top:"+t+"px; height:"+h+"px; z-index: 10;";
-	document.getElementById("arrow1").style.WebkitTransform = "rotate("+d+"deg)"; 
-	document.getElementById("arrow1").style.msTransform = "rotate("+d+"deg)";
-	document.getElementById("arrow1").style.transform = "rotate("+d+"deg)";
+	document.getElementById("arrow1").style.WebkitTransform = "rotate("+correctAnswer+"deg)"; 
+	document.getElementById("arrow1").style.msTransform = "rotate("+correctAnswer+"deg)";
+	document.getElementById("arrow1").style.transform = "rotate("+correctAnswer+"deg)";
 }
-let topVal=470.5;
-function placeLoad(){
+
+function commonStmtsInEvaluateCalculationAnswers(inputBoxId, checkBtnId, resultBtnId, RgtWrngMarkId)
+{	
+	document.querySelector(RgtWrngMarkId).classList.remove("showWrongMark");
+	document.querySelector(inputBoxId).disabled=true;
+	document.querySelector(inputBoxId).style.color="black";
+	document.querySelector(resultBtnId).style.visibility="hidden";
+	document.querySelector(checkBtnId).style.visibility="hidden";
+	if(simsubscreennum!==17)
+		document.querySelector('#nextButton').style.visibility="visible";
+}
+
+function evaluateCalculationAnswers(inputBoxId,rightAnswer,checkBtnId,resultBtnId,RgtWrngMarkId)
+{
+	document.querySelector(resultBtnId).disabled=true;
+	document.querySelector(checkBtnId).addEventListener("click",function(){
+		if(document.querySelector(inputBoxId).value || document.querySelector(inputBoxId).value!==null)
+		{
+			if(+(document.querySelector(inputBoxId).value) === rightAnswer)
+			{
+				document.querySelector(RgtWrngMarkId).classList.remove("markHidden");
+				document.querySelector(RgtWrngMarkId).innerHTML="&#10004;";
+				document.querySelector(RgtWrngMarkId).classList.add("showRightMark");
+				commonStmtsInEvaluateCalculationAnswers(inputBoxId, checkBtnId, resultBtnId, RgtWrngMarkId);
+			}
+			else 
+			{
+				document.querySelector(RgtWrngMarkId).classList.remove("markHidden");
+				document.querySelector(RgtWrngMarkId).innerHTML="&#10008;";
+				document.querySelector(RgtWrngMarkId).classList.add("showWrongMark");
+				document.querySelector(RgtWrngMarkId).classList.remove("showRightMark");
+				document.querySelector(resultBtnId).disabled=false;
+			}
+		}
+	});
+	document.querySelector(resultBtnId).addEventListener("click",function()
+	{
+		document.querySelector(inputBoxId).value=rightAnswer;
+		document.querySelector(RgtWrngMarkId).classList.add("markHidden");
+		commonStmtsInEvaluateCalculationAnswers(inputBoxId, checkBtnId, resultBtnId, RgtWrngMarkId)
+	});
+}
+
+let degree=0, m=0, stop=false, x=0,counter=0, swDegree, n=0, runOnce=true, dialGuageStopped=false, looper1, looper2;
+
+// function updateTableOnDialGuageReading()
+// {
+	// $("#tab12").delay(0)
+	// .queue(function (updateTableOnDialGuageReading) 
+	// {
+		// console.log(dataset[x][2]);
+		// $(this).append("<tr><td style=\"border:1px solid black; padding:5px;\">" + dataset[x][0]  + "</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[x][1] +"</td><td style=\"border:1px solid black; padding:5px;\">"+ dataset[x][2]  +"</td></tr>");
+	// });
+// }
+
+function showTableReading()
+{
+	counter++;
+	const table = document.querySelector('#tab12');
+	const row=table.insertRow(x+1);
+	const cell1=row.insertCell(0);
+	const cell2=row.insertCell(1);
+	const cell3=row.insertCell(2);
+	cell1.style="border:1px solid black; padding:5px;";
+	cell2.style="border:1px solid black; padding:5px;";
+	cell3.style="border:1px solid black; padding:5px;";
+	cell1.innerHTML=dataset[x][0];
+	cell2.innerHTML=dataset[x][1];
+	cell3.innerHTML=dataset[x][2];
+	x++;
+}
+
+function rotateStopwatchNeedle(el)
+{
+	// console.log(swDegree);
+	const stopWatchSpeed = (x==0) ? 15 : (speedTimingDataset[x] - speedTimingDataset[x-1])/10;
+	const elem = document.getElementById(el);
 	
+	if(navigator.userAgent.match("Chrome"))
+	{
+		elem.style.WebkitTransform = "rotate("+swDegree+"deg)";
+	} 
+	else if(navigator.userAgent.match("Firefox"))
+	{
+		elem.style.MozTransform = "rotate("+swDegree+"deg)";
+	} 
+	else if(navigator.userAgent.match("MSIE"))
+	{
+		elem.style.msTransform = "rotate("+swDegree+"deg)";
+	} 
+	else if(navigator.userAgent.match("Opera"))
+	{
+		elem.style.OTransform = "rotate("+swDegree+"deg)";
+	} 
+	else 
+	{
+		elem.style.transform = "rotate("+swDegree+"deg)";
+	}
+	
+	if(counter < speedTimingDataset.length-1) 
+	{
+		swDegree=n++;
+		looper2 = setTimeout('rotateStopwatchNeedle(\''+el+'\','+stopWatchSpeed+')',stopWatchSpeed);
+		setTimeout(function()
+		{
+			if(dialGuageStopped)
+			{
+				if(x<=speedTimingDataset.length-1)
+				{
+					showTableReading();
+				}
+				else 
+				{
+					for(i=4;i<=8;i++)
+					{
+						document.getElementById("12-"+i).style.visibility="hidden";
+					}
+					document.querySelector("#p12-1").style.visibility="hidden";
+					document.querySelector("#p12-2").style.visibility="hidden";
+					document.querySelector("#nextButton").style.visibility="visible";
+				}
+			}
+		},1000);
+		
+	}
+	// console.log(degree,swDegree);
+}
+
+function rotateAnimation(el)
+{
+	const speed= (x==0) ? speedTimingDataset[x] : (speedTimingDataset[x] - speedTimingDataset[x-1])/10;
+	const elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome"))
+	{
+		elem.style.WebkitTransform = "rotate("+degree+"deg)";
+	} 
+	else if(navigator.userAgent.match("Firefox"))
+	{
+		elem.style.MozTransform = "rotate("+degree+"deg)";
+	} 
+	else if(navigator.userAgent.match("MSIE"))
+	{
+		elem.style.msTransform = "rotate("+degree+"deg)";
+	} 
+	else if(navigator.userAgent.match("Opera"))
+	{
+		elem.style.OTransform = "rotate("+degree+"deg)";
+	} 
+	else 
+	{
+		elem.style.transform = "rotate("+degree+"deg)";
+	}
+	
+	if(degree===360) m=0;
+	
+	if(counter===3) document.getElementById("12-5").style.transform="rotate(-105deg)";
+		
+	if(counter<=10)
+	{
+		m++;
+		degree=m;
+		looper1 = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+		// console.log(speed,m, speedTimingDataset[x]);
+	}
+	else dialGuageStopped=true;
+
+	if(degree === Math.round(degreeDataset[x]*3.5))
+	{
+		showTableReading();
+		if(runOnce)	rotateStopwatchNeedle("12-8");
+		runOnce=false;
+		console.log(degree, swDegree);
+	}
 }
 
 function magic()
@@ -526,29 +640,352 @@ function magic()
 	}
 	else if(simsubscreennum==12){
 		const loadDiv=document.getElementById('12-3');
-		let count=0;
-		let rep=setInterval(function()
+		let topVal=470.5;
+		document.getElementById('12-2').style.visibility="visible";
+		blinkArrow(505,480,270,35);
+		document.getElementById("12-2").addEventListener("click",function()
 		{
-			count++;
-			document.getElementById('12-2').style.visibility="visible";
-			blinkArrow(505,480,270,35);
-			document.getElementById("12-2").addEventListener("click",function()
-			{
-				myStopFunction();
-				document.getElementById("12-2").onclick="";
-				document.getElementById('12-2').style.visibility="hidden";
-				topVal=topVal-5;
-				const loadImg=document.createElement('img');
-				loadImg.src="images/weight.png";
-				loadImg.style.position="absolute";
-				loadImg.style.left="112.5px";
-				loadImg.style.top=topVal+"px";
-				loadDiv.append(loadImg);
+			myStopFunction();
+			document.getElementById("12-2").onclick="";
+			document.getElementById('12-2').style.visibility="hidden";
+			// topVal=topVal-5;
+			const loadImg=document.createElement('img');
+			loadImg.src="images/weight.png";
+			loadImg.style.position="absolute";
+			loadImg.style.left="112.5px";
+			// loadImg.style.top=topVal+"px";
+			loadImg.style.top=topVal-5+"px";
+			loadDiv.append(loadImg);
+			setTimeout(function(){
+				document.getElementById("12-4").style.visibility="visible";
+				document.getElementById("12-5").style.visibility="visible";
+				document.getElementById("12-6").style.visibility="visible";
+				document.getElementById("12-7").style.visibility="visible";
+				document.getElementById("12-8").style.visibility="visible";
+				document.getElementById("p12-1").style.visibility="visible";
+				document.getElementById("p12-2").style.visibility="visible";
+				document.getElementById("12-5").style.transformOrigin="50% 100%";
+				document.getElementById("12-5").style.transform="rotate(-135deg)";
+				document.getElementById("12-6").style.transformOrigin="50% 100%";
+				document.getElementById("12-6").style.transform="rotate(0deg)";
+				document.getElementById("tabDiv12").style.visibility="visible";
+				document.getElementById("12-8").style.transformOrigin="50% 100%";
+				document.getElementById("12-6").style.transformOrigin="50% 90%";
+				rotateAnimation("12-6");
+				// setTimeout(function(){
+					// document.querySelector("#nextButton").style.visibility="visible";
+				// },750);
+			},500);
+		});
+	}
+	else if(simsubscreennum==13)
+	{
+		document.getElementById("tabDiv12").style.visibility="hidden";
+		document.getElementById("12-4").style.visibility="hidden";
+		document.getElementById("12-5").style.visibility="hidden";
+		document.getElementById("12-6").style.visibility="hidden";
+		document.getElementById("12-7").style.visibility="hidden";
+		document.getElementById("p12-1").style.visibility="hidden";
+		document.getElementById("p12-2").style.visibility="hidden";
+		document.getElementById("12-8").style.visibility="hidden";
+		const H=2;
+		const deltaH=((dataset[0][2]-dataset[14][2])*0.001);
+		const correctAnswer=(H-(deltaH/2))/2;
+		create_totalTable(0,"tab13");
+		evaluateCalculationAnswers('#dp',correctAnswer,'#check13','#result13','#mark13');	
+	}
+	else if(simsubscreennum===14)
+	{
+		document.querySelector("#mark13").style.visibility="hidden";
+		displayLogTMethodGraph();
+		setTimeout(function(){
+			document.querySelector("#nextButton").style.visibility="visible";
+		},750);
+		// $("#chartContainer").ejChart(
+        // {
+		    // primaryXAxis:
+            // {
+			   	// labelFormat: "{value}",
+                // title: { text: 'Elapsed time, t (min)' },
+                // range: { min:-5, max: 85, interval:5}
+            // },	
+			// primaryYAxis:
+            // {
+				// labelFormat: "{value}",
+                // title: { text: 'Dial gauge reading (div)' },
+                // range: { min: 340, max: 450, interval: 20}				
+            // },	
+			// series: 
+			// [
+			    // {
+                // points: [
+					// {x: dataset[0][0], y: dataset[0][2]},
+					// {x: dataset[1][0], y: dataset[1][2]},
+					// {x: dataset[2][0], y: dataset[2][2]},
+					// {x: dataset[3][0], y: dataset[3][2]},
+					// {x: dataset[4][0], y: dataset[4][2]},
+					// {x: dataset[5][0], y: dataset[5][2]},
+					// {x: dataset[6][0], y: dataset[6][2]},
+					// {x: dataset[7][0], y: dataset[7][2]},
+					// {x: dataset[8][0], y: dataset[8][2]},
+					// {x: dataset[9][0], y: dataset[9][2]},
+					// {x: dataset[10][0], y: dataset[10][2]},
+					// {x: dataset[11][0], y: dataset[11][2]},
+					// {x: dataset[12][0], y: dataset[12][2]},
+					// {x: dataset[13][0], y: dataset[13][2]},
+					// {x: dataset[14][0], y: dataset[14][2]}
+				// ],
+				// type: 'line',
+				// fill: "#0066FF",
+				// name : 'Elapsed time, t (min) v/s Dial gauge reading (div)',
+				// border :{width:5},
+				// tooltip:{visible:true},
+				// marker:{
+					// shape: 'circle',
+					// size:
+					// {
+						// height: 5, width: 5
+					// },
+					// visible: true
+				// },					
+				// enableAnimation :false
+                // },
+				// {
+					// points: [
+					
+					// { x: -0.85, y: 430 , text : ''},
+					// { x: 1.5, y: 400 , text : ' '},
+					// { x: 4.8, y: 362, text : 'A'}
+					
+					// ],
+					// type: 'line', 
+					// // dashArray : '10,4',
+					// // name: '',
+					// fill: "#FF1493",
+					// // border :{width:1},
+					// tooltip:{visible:false},
+					// marker:{
+                        // shape: 'circle',
+						// size:
+                        // {
+                            // height: 5, width: 5
+                        // },
+						// dataLabel:
+						// { 
+                          // visible:true, 
+                          // font: { color: 'FF1493', size: '10px' }
+						// },
+                        // visible: false
+                    // },					
+					// enableAnimation :false
+                // },
+				// {
+					// points: [
+					
+					// { x: -5, y: 400, text : 'd50'},
+					// { x: 1.5, y: 400 , text : 'F' },
+					// { x: 1.5, y: 340, text : 't50'}
+					
+					// ],
+					// type: 'line',
+					// dashArray : '10,4',
+					// name: 't50 = 1.5min',
+					// fill: "#00FF99",
+					// border :{width:5},
+					// tooltip:{visible:true},
+					// marker:{
+                        // shape: 'circle',
+						// size:
+                        // {
+                            // height: 5, width: 5
+                        // },
+						// dataLabel:
+						// { 
+                          // visible:true, 
+                          // font: { color: 'black', size: '12px' }
+						// },
+                        // visible: true
+                    // },					
+					// enableAnimation :false
+                // },
+				// {
+					// points: [
+					
+					// { x: -5, y: 362, text : 'd100'},
+					// { x: 81, y: 362, text: ' '},
 				
-			});
-		},1000);
-		if(count>=5)
-			clearInterval(rep);
+					// ],
+ 
+                        						
+					// type: 'line',
+					// dashArray : '12,4',
+					// name: 'd100',
+					// fill: "#800080",
+					// border :{width:5},
+					// tooltip:{visible:true},
+					// marker:{
+                        // shape: 'circle',
+						// size:
+                        // {
+                            // height: 5, width: 5
+                        // },
+						// dataLabel:
+						// { 
+                          // visible:true, 
+                          // font: { color: 'black', size: '12px' }
+						// },
+                        // visible: true
+                    // },					
+					// enableAnimation :false
+                // },
+				// {
+					// points: [
+					
+					// { x: -5, y: 436, text : 'd0'},
+					// { x: 8, y: 436, text: ' '},
+					// { x: 8, y: 430, text: 'z0'},
+					// { x: 0.25, y: 430, text: 'B'},
+					// ],
+ 
+                        						
+					// type: 'line',
+					// dashArray : '12,4',
+					// name: 'd0',
+					// fill: "orange",
+					// border :{width:5},
+					// tooltip:{visible:true},
+					// marker:{
+                        // shape: 'circle',
+						// size:
+                        // {
+                            // height: 5, width: 5
+                        // },
+						// dataLabel:
+						// { 
+                          // visible:true, 
+                          // font: { color: 'orange', size: '12px' }
+						// },
+                        // visible: true
+                    // },					
+					// enableAnimation :false
+                // },
+				// {
+					// points: [
+					// { x: 8, y: 430, text: ' '},
+					// { x: 8, y: 422, text: 'z0'},
+					// { x: 0.25, y: 422, text: 'C'},
+					// ],
+ 
+                        						
+					// type: 'line',
+					// dashArray : '12,4',
+					// name: 'C',
+					// fill: "yellow",
+					// border :{width:5},
+					// tooltip:{visible:true},
+					// marker:{
+                        // shape: 'circle',
+						// size:
+                        // {
+                            // height: 5, width: 5
+                        // },
+						// dataLabel:
+						// { 
+                          // visible:true, 
+                          // font: { color: 'yellow', size: '12px' }
+						// },
+                        // visible: true
+                    // },					
+					// enableAnimation :false
+                // },
+				// {
+					// points: [
+					
+					// { x: 0.25, y: 430, text: ''},
+					// { x: 0.25, y: 340, text: 't1'},
+					// ],
+ 
+                        						
+					// type: 'line',
+					// dashArray : '12,4',
+					// name: 't1',
+					// fill: "lightgreen",
+					// border :{width:5},
+					// tooltip:{visible:true},
+					// marker:{
+                        // shape: 'circle',
+						// size:
+                        // {
+                            // height: 5, width: 5
+                        // },
+						// dataLabel:
+						// { 
+                          // visible:true, 
+                          // font: { color: 'lightgreen', size: '12px' }
+						// },
+                        // visible: true
+                    // },					
+					// enableAnimation :false
+                // },
+				// {
+					// points: [
+					
+					// { x: 1, y: 422, text: ''},
+					// { x: 1, y: 340, text: 't2'},
+					// ],
+ 
+                        						
+					// type: 'line',
+					// dashArray : '12,4',
+					// name: 't2',
+					// fill: "grey",
+					// border :{width:5},
+					// tooltip:{visible:true},
+					// marker:{
+                        // shape: 'circle',
+						// size:
+                        // {
+                            // height: 5, width: 5
+                        // },
+						// dataLabel:
+						// { 
+                          // visible:true, 
+                          // font: { color: 'grey', size: '12px' }
+						// },
+                        // visible: true
+                    // },					
+					// enableAnimation :false
+                // }
+			// ],
+			// commonSeriesOptions :{ enableSmartLabels : true},
+            // load:"loadTheme",
+			// isResponsive: true,
+
+			// // title:{
+				// // text: 'Water content v/s Number of drops',
+				// // font: { color: 'black', size: '18px' }
+				// // },
+			// legend:{visible:true}
+        // });
+		
+	}
+	else if(simsubscreennum===15)
+	{
+		const correctAnswer=0.126;
+		evaluateCalculationAnswers('#cv',correctAnswer,'#check15','#result15','#mark15');
+	}
+	else if(simsubscreennum===16)
+	{
+		document.querySelector("#mark15").style.visibility="hidden";
+		displayRootTMethodGraph();
+		setTimeout(function(){
+			document.querySelector("#nextButton").style.visibility="visible";
+		},750);
+	}
+	else if(simsubscreennum===17)
+	{
+		const correctAnswer=0.00256;
+		evaluateCalculationAnswers('#rootTcv',correctAnswer,'#check17','#result17','#mark17');
 	}
 }		
 
@@ -583,14 +1020,14 @@ function weightOfContainer(id)
 						//IsInt(dataset[p][1]);
 						if(id==3)
 						{
-							document.getElementById("p"+id+"-1").innerHTML="145.00";
+							document.getElementById("p"+id+"-1").innerHTML="200.00";
 							// document.getElementById("p"+id+"-2").innerHTML="Weight of empty metal tube = "+dataset[p][0]+" g";
-							document.getElementById("p"+id+"-2").innerHTML="Weight of empty specimen ring = 145 g";
+							document.getElementById("p"+id+"-2").innerHTML="Weight of empty specimen ring = 200 g";
 						}
 						if(id==5)
 						{
-							document.getElementById("p"+id+"-1").innerHTML="291.00";
-							document.getElementById("p"+id+"-2").innerHTML="Weight of metal tube + specimen ring, W<sub>2</sub> = 291 g";
+							document.getElementById("p"+id+"-1").innerHTML="350.00";
+							document.getElementById("p"+id+"-2").innerHTML="Weight of specimen ring + wet soil, W<sub>2</sub> = 350 g";
 						}
 						setTimeout(function()
 						{
