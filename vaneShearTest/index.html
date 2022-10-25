@@ -137,13 +137,26 @@ var temp=0;
 <div id="canvas6" class="simsubscreen" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;6&nbsp;</span>
+	<p class="steptext">&nbsp;Measure the height and diameter of the vane.</p>
+	<img id="ex6-1" style="position:absolute; left:400px; top:325px; width:31px;" title="Vane" src="images/vanes.png" />
+	<img id="ex6-2" style="position:absolute; left:250px; top:55px; width:70px;" title="Scale" src="images/scales.png" />
+	<p id="exp6-1" style="position:absolute; left:0px; top:415px; font-size:12px;">Height of the vane = _________cm</p>
+	<p id="exp6-2" style="position:absolute; left:0px; top:450px; font-size:12px;">Diameter of the vane = _________cm</p>
+	<!-- <img id="ex6-2" style="position:absolute; left:300px; top:105px; width:80px;" title="Scale" src="images/scaleWithReading.png" /> -->
+	<!-- <img id="ex6-2" style="position:absolute; left:300px; top:105px; width:80px; transform:rotate(90deg);" title="Scale" src="images/scaleWithReading.png" /> -->
+	<h1 id="exh6-1" style="position:absolute; left:0px; top:215px; color:grey; text-align:center; visibility:hidden;">Repeat the procedure for 2 more trials</h1>
+</div>
+
+<div id="canvas7" class="simsubscreen" style="visibility:hidden;">
+	<strong class="incanvas">STEP</strong>
+	<span class="circlebg">&nbsp;6&nbsp;</span>
 	<p class="steptext">&nbsp;Mount the specimen container on the Vane Shear test Apparatus.</p>
 	<img id="9-1" style="position:absolute; left:230px; top:120px; width:210px;" src="images/vane test apparatus.png" />
 	<img id="9-2" style="position:absolute; left:70px; top:385px;" title="Tin with soil" src="images/tinWithSoil.png" />
 	<img id="9-3" style="position:absolute; left:42.5px; top:385px; visibility:hidden;" src="images/hand.png" />
 </div>
 
-<div id="canvas7" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas8" class="simsubscreen" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;7&nbsp;</span>
 	<p class="steptext">&nbsp;Now lower the shear vanes into the sample such that the top of the vane is at least 1cm below the top surface of the specimen.</p>
@@ -159,7 +172,7 @@ var temp=0;
 	<!-- <img id="10-7" style="position:absolute; left: 580px; top: 182px; visibility:hidden;" src="images/zoomHand.png" /> -->
 </div>
 
-<div id="canvas8" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas9" class="simsubscreen" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;8&nbsp;</span>
 	<p class="steptext">&nbsp;Note down the initial reading of the angle of twist as shown by the pointer in the instrument. </p>
@@ -177,7 +190,7 @@ var temp=0;
 	<div id="11-8" style="position:absolute; left: 393px; top: 137.5px; border:2px solid red; width:160px; height:105px; visibility:hidden;"></div>
 </div>
 
-<div id="canvas9" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas10" class="simsubscreen" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;9&nbsp;</span>
 	<p class="steptext">&nbsp;Start the Vane Shear apparatus and allow the vanes to rotate at a uniform speed of 0.1°/s until the specimen fails.</p>
@@ -214,7 +227,7 @@ var temp=0;
 </div>
 <!-- When the specimen fails, the strain indicator pointer will move backwards on the circular graduated scale and at this point stop the test  -->
 
-<div id="canvas10" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas11" class="simsubscreen" style="visibility:hidden;">
 	<strong class="incanvas">STEP</strong>
 	<span class="circlebg">&nbsp;10&nbsp;</span>
 	<p class="steptext">&nbsp;Note down the final reading of the angle of twist as shown by the pointer.</p>
@@ -237,7 +250,7 @@ var temp=0;
 	<span id="mark" style="position:absolute; left: 535px; top: 400px; font-size:22px;"></span>
 </div>
 
-<div id="canvas11" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas12" class="simsubscreen" style="visibility:hidden;">
 	<h3 style="position:absolute; left:100px; top:70px;">&nbsp;Observations : </h3>
 	<table style="position:absolute; left:115px; top:120px; border:1px solid black; font-size:14px;  text-align:left; width:60%;">
 	<tr>
@@ -259,11 +272,11 @@ var temp=0;
 	</table>
 </div>
 
-<div id="canvas12" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas13" class="simsubscreen" style="visibility:hidden;">
 	<h1 id="h12-1" style="position:absolute; left:0px; top:215px; color:grey; text-align:center; display:none;">Repeat the procedure for 2 more trials </h1>
 </div>
 
-<div id="canvas13" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas14" class="simsubscreen" style="visibility:hidden;">
 	<h3 style="position:absolute; left:40px; top:70px;">&nbsp;Observations : </h3>
 	<table id="totalTable" style="position:absolute; left:60px; top:130px; border:1px solid black; font-size:14px;  text-align:center; ">
 		<tr>
@@ -275,12 +288,15 @@ var temp=0;
 	</table>
 </div>
 
-<div id="canvas14" class="simsubscreen"  style="visibility:hidden">
+<div id="canvas15" class="simsubscreen"  style="visibility:hidden">
 	<center><h2 id="step16" style="font-family:verdana;  position:absolute; left:200px; top:10px; ">Characteristic Curve<h2></center></p>
 	<div id="chartContainer" style="position:absolute; height: 410px; width: 560px; left:50px; top:70px;"></div> 
+	
+	<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; left:-10px; top:85px; cursor:pointer;"><strong>Description</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify;">The values of Torque for each trial is derived from this graph by drawing the vertical and its corresponding horizontal component.</span></span>
 </div>
 
-<div id="canvas15" class="simsubscreen" style="visibility:hidden;">
+<div id="canvas16" class="simsubscreen" style="visibility:hidden;">
 	<h3 style="position:absolute; left:-50px; top:-20px;">&nbsp;Observations : </h3>
 	<table id="totalTable2" style="position:absolute; left:-40px; top:30px; border:1px solid black; font-size:14px;  text-align:center; ">
 		<tr>

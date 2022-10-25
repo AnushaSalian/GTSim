@@ -1893,6 +1893,30 @@ span.frac > span {display: none;}
     100%{transform:rotate(360deg);}
 }
 
+@keyframes moveScale
+{
+	0%{left:250px; top:55px;}
+    100%{left:330px; top:55px;}
+}
+
+@-webkit-keyframes moveScale
+{
+	0%{left:250px; top:55px;}
+    100%{left:330px; top:55px;}
+}
+
+@keyframes moveScale2
+{
+	0%{left:300px; top:145px;}
+    100%{left:300px; top:64px;}
+}
+
+@-webkit-keyframes moveScale2
+{
+	0%{left:300px; top:145px;}
+    100%{left:300px; top:64px;}
+}
+
 button{
 	border:1px solid darkgrey;
 	padding:7.5px; 

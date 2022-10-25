@@ -3,6 +3,8 @@
 			 // [335,225,288,318,225,270,298,252]];//torque as per dataset given
 			 // // [334,225,289,318,225,270,300,255]];//torque as per dataset given
 
+const vaneHeight=1.25;
+const vaneDia=1.25;
 var dataset=[[130,130,120,156,145,150,180],//initial angle of twist
 			 [152,145,139,177,163,170,197],	//final angle of twist
 			 [335,225,288,318,270,298,252]];//torque as per dataset given
@@ -148,7 +150,7 @@ function clearTableRows(tableId)
 
 function navNext()
 {
-	for(temp=0;temp<15;temp++)
+	for(temp=0;temp<16;temp++)
 	{
 		document.getElementById("canvas"+temp).style.visibility="hidden";
 	}
@@ -216,7 +218,7 @@ function magic()
 						setTimeout(function()
 						{
 							document.getElementById("5-12").style.visibility="visible";
-							blinkArrow(300,335,360,40);
+							blinkArrow(250,310,270,40);
 							document.getElementById('5-12').onclick=function()
 							{
 								myStopFunction();
@@ -357,6 +359,39 @@ function magic()
 	}
 	else if(simsubscreennum == 6)
 	{
+		blinkArrow(250,300,180,30);
+		document.getElementById("ex6-2").onclick=function()
+		{
+			myStopFunction();
+			document.getElementById("ex6-2").onclick="";
+			document.getElementById("ex6-2").style.animation="moveScale 0.5s forwards";
+			setTimeout(function()
+			{
+				document.getElementById("exp6-1").innerHTML="Height of the vane = "+vaneHeight+"cm";
+				document.getElementById("ex6-1").style="position:absolute; left:165px; top:200px; width:31px;";
+				document.getElementById("ex6-2").style="position:absolute; left:300px; top:145px; width:70px;";
+				document.getElementById("ex6-2").style.transform="rotate(-270deg)";
+				blinkArrow(350,300,270,30);
+				document.getElementById("ex6-2").onclick=function()
+				{
+					myStopFunction();
+					document.getElementById("ex6-2").onclick="";
+					document.getElementById("ex6-2").style.animation="moveScale2 0.6s forwards";
+					setTimeout(function()
+					{
+						document.getElementById("exp6-2").innerHTML="Diameter of the vane = "+vaneDia+"cm";
+						setTimeout(function()
+						{
+							document.getElementById("ex6-2").style.visibility="hidden";
+							document.getElementById("nextButton").style.visibility="visible";
+						},250);
+					},600);
+				}
+			},500);
+		}
+	}
+	else if(simsubscreennum == 7)
+	{
 		blinkArrow(82,460,180,30);
 		document.getElementById("9-2").onclick=function()
 		{
@@ -376,7 +411,7 @@ function magic()
 			},1000);
 		}
 	}	
-	else if(simsubscreennum == 7)
+	else if(simsubscreennum == 8)
 	{
 		setTimeout(function()
 		{
@@ -411,7 +446,7 @@ function magic()
 			}
 		},500);
 	}
-	else if(simsubscreennum == 8)
+	else if(simsubscreennum == 9)
 	{
 		numberGenerator();
 		p1=arr[0]; p2=arr[1]; p3=arr[2];
@@ -465,7 +500,7 @@ function magic()
 			}
 		},500);
 	}
-	else if(simsubscreennum == 9)
+	else if(simsubscreennum == 10)
 	{
 		document.getElementById("p11-4").style.visibility="hidden";
 		document.getElementById("11-5").style.visibility="hidden";
@@ -530,7 +565,7 @@ function magic()
 			}
 		},500);
 	}
-	else if(simsubscreennum==10)
+	else if(simsubscreennum==11)
 	{
 		document.getElementById("12-7").style.visibility="hidden";
 		document.getElementById("13-7").style.visibility="visible";
@@ -639,7 +674,7 @@ function magic()
 			},500);
 		},500);
 	}
-	else if(simsubscreennum == 11)
+	else if(simsubscreennum == 12)
 	{
 		document.getElementById("13-7").style.visibility="hidden";
 		document.getElementById("13-5").style.visibility="hidden";
@@ -660,7 +695,7 @@ function magic()
 			//document.getElementById("nextButton").style.visibility="visible";
 		},300);
 	}
-	else if(simsubscreennum == 12)
+	else if(simsubscreennum == 13)
 	{
 		$("#h12-1").fadeIn(1000);
 		setTimeout(function()
@@ -668,7 +703,7 @@ function magic()
 			document.getElementById("nextButton").style.visibility="visible";
 		},2000);
 	}
-	else if(simsubscreennum == 13)
+	else if(simsubscreennum == 14)
 	{
 		create_totalTable(arr);
 		setTimeout(function()
@@ -676,7 +711,7 @@ function magic()
 			document.getElementById("nextButton").style.visibility="visible";
 		},700);
 	}
-	else if(simsubscreennum == 14)
+	else if(simsubscreennum == 15)
 	{
 		var i=0
 		
@@ -787,7 +822,7 @@ function magic()
 			document.getElementById("nextButton").style.visibility="visible";
 		},1500);
 	}
-	else if(simsubscreennum == 15)
+	else if(simsubscreennum == 16)
 	{
 		create_totalTable2(arr);
 		document.getElementById("check").onclick=function()

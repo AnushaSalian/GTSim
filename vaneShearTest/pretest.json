@@ -1,0 +1,86 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "In V-notch the flow area decreases as H _______.",
+      "answers": {
+        "a": "Decreases",
+        "b": "Increases",
+        "c": "Remains same",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "A right angled V-notch having a depth of water at V-notch as 200mm, calculate the discharge over the notch in liters per minute. Assume coefficient of discharge as 0.62",
+      "answers": {
+        "a": "1560 liters/min",
+        "b": "26 liters/min",
+        "c": "1320 liters/min",
+        "d": "30 liters/min"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "When &theta;= 90<sup>o</sup> and c<sub>d</sub>= 0.6 for triangular notch, the total discharge can be written as ",
+      "answers": {
+        "a": "1.417H<sup>3/2</sup>",
+        "b": "14.17H<sup>3/2</sup>",
+        "c": "1.417H<sup>3/2</sup>",
+        "d": "14.17H<sup>5/2</sup>"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    },
+    {
+      "question": "V-notch is a type of sharp edged weir.(Say true or false)",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "An error of 1% in measuring the head of water over the crest of a triangular notch, produces an error in the discharge which is equal to",
+      "answers": {
+        "a": "1.5%",
+        "b": "2%",
+        "c": "1.25%",
+        "d": "2.5%"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    }
+  ]
+}

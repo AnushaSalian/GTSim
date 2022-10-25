@@ -1,0 +1,86 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "In a tank or channel, notch is provided to measure",
+      "answers": {
+        "a": "Velocity",
+        "b": "Pressure",
+        "c": "Discharge",
+        "d": "Static energy"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "Most economical section of a triangular channel is",
+      "answers": {
+        "a": "Isosceles triangle with 45<sup>o</sup> vertex angle",
+        "b": "Equilateral triangle",
+        "c": "Right angled triangle with equal sides",
+        "d": "Right angled triangle"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "c",
+      "difficulty": ""
+    },
+    {
+      "question": "The sheet of liquid flowing over a notch is known as nappe. (True or false)",
+      "answers": {
+        "a": "False",
+        "b": "True"
+      },
+      "explanations": {
+        "a": "",
+        "b": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": ""
+    },
+    {
+      "question": "A submerged weir is one in which the water level on the downstream of the weir is",
+      "answers": {
+        "a": "Slightly above the crest level",
+        "b": "Below the crest level",
+        "c": "Just at the crest level",
+        "d": "At the same elevation as the upstream water surface"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": ""
+    },
+    {
+      "question": "The ratio of the percentage error in the discharge and percentage error in the measurement of head over a triangular notch, is",
+      "answers": {
+        "a": "2/5",
+        "b": "3/2",
+        "c": "2/3",
+        "d": "5/2"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "d",
+      "difficulty": ""
+    }
+  ]
+}
