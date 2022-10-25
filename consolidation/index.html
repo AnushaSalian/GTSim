@@ -60,13 +60,14 @@ var temp=0;
 	<p class="incanvas" style="font-size:14px;">To determine the coefficient of consolidation of a soil sample by conducting a one dimensional<br> consolidation test using a fixed ring type consolidometer.</p><br/>
 	<h4 class="incanvas">Apparatus used:</h4>
 	<p class="incanvas" style="font-size:14px;">Fixed ring type consolidometer, Specimen ring, Porous stones, Filter paper, Guide ring, Outer ring,<br> Pressure pad, Steel ball, Stop watch, Loading device etc.</p>
-	<!-- <img style="position:absolute; left:0px; top:190px;" title = "" src="images/human.png" />
-	<img style="position:absolute; left:150px; top:320px;" title = "Table" src="images/table.png" />
-	<img style="position:absolute; left:530px; top:322.5px; width:7%; " title = "Metal tube" src="images/tin.png" />
+	 <img style="position:absolute; left:120px; top:190px;" title = "" src="images/human.png" />
+	<img style="position:absolute; left:320px; top:210px; width:20%;" title = "" src="images/fullSetup.png" />
+	<!-- <img style="position:absolute; left:150px; top:320px;" title = "Table" src="images/table.png" /> -->
+	<!--<img style="position:absolute; left:530px; top:322.5px; width:7%; " title = "Metal tube" src="images/tin.png" />
 	<img style="position:absolute; left:380px; top:200px; width:15%; " title = "Vane test apparatus.png" src="images/vaneShear1.png" />
 	<img style="position:absolute; left:190px; top:280px; width:18%;"  title = "Weighing Machine" src="images/wm1.png" /> -->
 	&nbsp;<span class="tooltip" style="border-bottom:1px dotted ; color:red; top:20px; cursor:pointer;"><strong>Description</strong>
-	<span  class="tooltiptext" style="font-size:14px; text-align:justify;"><b>Consolidation test</b> </span></span>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify;"><b style="color:red;">Consolidation of soil</b> is the gradual process of reduction of volume of soil (partially or fully saturated) under sustained loading due to the expulsion of water from pores present in the soil.</span></span>
 </div>
 
 
@@ -264,11 +265,29 @@ var temp=0;
 
 <div class="simsubscreen" id="canvas14" style="visibility:hidden">
 	<center><h2 id="step14" style="font-family:verdana;  position:absolute; left:200px; top:-10px; ">Characteristic Curve<h2></center>
+	
 	<p id="p14-1" style=" position:absolute; left:260px; top:42.5px; font-size:14px; border-bottom:2px solid black; font-weight:bold;">Log t method</p>
 	<div id="chartContainer" style="height: 400px; width: 700px; margin-left:-20px; margin-right:100px; margin-top:95px"></div> 
 	
 	<div style="  position:absolute; left:575px; top:455px; background-color:white; width:120px; height:60px;"></div>
 	<div style="  position:absolute; left:-25px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	
+	<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; top:60px; cursor:pointer;"><strong>Description</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; position:absolute; left:50px; padding-right:30px; line-height:150%;">
+	<ol>
+	<li>Plot the dial gauge readings v/s the elapsed time on a semi log graph sheet</li>
+	<li>Join the points thus plotted with a smooth curve</li>
+	<li>Draw a tangent to this curve</li>
+	<li>Draw a horizontal line connecting the points which are showing a horizontal pattern in the plotted curve; this point will be d<sub>100</sub></li>
+	<li>Draw a vertical line from the first point of the plotted curve which gives us t<sub>1</sub></li>
+	<li>Multiply the t1 value by 4, the derived value should be plotted as t<sub>2</sub>  and should be carried over to the curve path, which is point C</li>
+	<li>Measure the vertical distance between point B and point C and multiply the value by 2, we will derive the value of z<sub>0</sub> 
+	<li>Draw the horizontal line corresponding to the z<sub>0</sub>  height, this will provide d<sub>0</sub> </li>
+	<li>The average of d<sub>0</sub> and d<sub>100</sub> will give us the d<sub>50</sub>  value</li>
+	<li>Now draw a horizontal line from d<sub>50</sub> point and join to the plotted curve, the point thus derived is point F</li>
+	<li>Draw a vertical line from F and thus we will get t<sub>50</sub> </li>
+	<ol>
+	</span></span>
 </div>
 
 <div class="simsubscreen" id="canvas15" style="visibility:hidden">
@@ -297,6 +316,19 @@ var temp=0;
 	
 	<div style="  position:absolute; left:575px; top:455px; background-color:white; width:120px; height:60px;"></div>
 	<div style="  position:absolute; left:-25px; top:455px; background-color:white; width:120px; height:60px;"></div>
+	
+	&nbsp;<span class="tooltip" style="border-bottom:1px dotted; color:red; position:absolute; position:absolute; top:60px; cursor:pointer;"><strong>Description</strong>
+	<span  class="tooltiptext" style="font-size:14px; text-align:justify; position:absolute; left:50px; padding-right:30px; line-height:160%;">
+	<ol>
+		<li>Plot the dial gauge readings v/s √t on a normal graph sheet</li>
+		<li>Join the points with a smooth curve</li>
+		<li>Now draw a tangent to the curve and the point of intersection as A in y-axis and as B in x-axis</li>
+		<li>Multiply the value of B by 1.15 and mark the point C on the x-axis</li>
+		<li>Now join the points A and C</li>
+		<li>Mark the point of intersection of line AC to the curve as point D</li>
+		<li>Draw a vertical line joining the point D to the x-axis, this will provide us √t<sub>90</sub> value from the graph</li>
+	</ol>
+	</span></span>
 </div>
 
 <div class="simsubscreen" id="canvas17" style="visibility:hidden">
@@ -304,7 +336,7 @@ var temp=0;
 	<span class="tooltip" style="border-bottom:1px dotted; position:absolute; left:10px; top:250px; cursor:pointer;"><strong>Variables used in calculation</strong>
 	<span  class="tooltiptext" style="font-size:14px; text-align:justify; width:400px; left:90%;">
 	<p>Time factor, T<sub>v</sub>90 = 0.845</p>
-	<p>Time corresponding to 90% consolidation, t<sub>90</sub> = 5.29min</p>
+	<p>Time corresponding to 90% consolidation, t<sub>90</sub> = 2.66min</p>
 	<p>Drainage path, d = 0.983</p>
 	</span></span>
 	
@@ -315,6 +347,11 @@ var temp=0;
 	<button id="check17" class="clsBtn" style="position:absolute; left:400px; top:77px;">CHECK</button>
 	<button id="result17" class="clsBtn" style="position:absolute; left:455px; top:77px;">RESULT</button>
 	</span>
+	</div>
+	
+	<div id="inference" style="position:absolute; left:5px; top:300px; visibility:hidden;">
+		<h3>Inference:</h3>
+      <p style="font-size:14px; line-height:200%;">The coefficient of consolidation obtained by root t and log t method is 2.5 and 2.067x10-3 cm2/sec. As the consolidation value ranges between 1 to 6 cm<sup>2</sup> sec the soil can be characterized as Boston blue clay (marine deposit of glacial clay, composed partially of illite) Remolded.</p>
 	</div>
 </div>
 

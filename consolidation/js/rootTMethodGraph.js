@@ -27,6 +27,7 @@ const displayRootTMethodGraph = function ()
 			fontFamily:"verdana"
 		},
 		axisX: {
+			interval: 2,
 			logarithmic: false,
 			title: "√t (min)",
 			minimum: 0,
@@ -68,9 +69,9 @@ const displayRootTMethodGraph = function ()
 				showInLegend: true,
 				indexLabelFontColor: "#C0504E",
 				indexLabelFontSize: 12,
-				dataPoints: [{ x: 0, y: 375.75, markerType:"none", toolTipContent: null },
-							 { x: 2.3, y: 375.75, indexLabel: "D", markerType:"none", toolTipContent: null }, //√t90
-							 { x: 2.3, y: 340, indexLabel: "√t90", toolTipContent: "√t90 = 2.3min" }]
+				dataPoints: [{ x: 0, y: 371.5, markerType:"none", toolTipContent: null },
+							 { x: 2.66, y: 371.5, indexLabel: "D", markerType:"none", toolTipContent: null }, //√t90
+							 { x: 2.66, y: 340, indexLabel: "√t90", toolTipContent: "√t90 = 2.66min" }]
 			},
 			{
 				type: "line",
@@ -80,7 +81,7 @@ const displayRootTMethodGraph = function ()
 				indexLabelFontColor: "#AB0",
 				indexLabelFontSize: 12,
 				dataPoints: [{ x:graphDataset[0][1], y: graphDataset[0][2], indexLabel: "A", markerType:"none", toolTipContent: null}, //A
-							{ x: 2.9, y: 340, indexLabel: "B", markerType:"none", toolTipContent: null }]//B
+							{ x: 3.55, y: 340, indexLabel: "B", markerType:"none", toolTipContent: null }]//B
 			},
 			{
 				type: "line",
@@ -91,7 +92,7 @@ const displayRootTMethodGraph = function ()
 				indexLabelFontColor: "#FFA500",
 				indexLabelFontSize: 12,
 				dataPoints: [{  x:graphDataset[0][1], y: graphDataset[0][2], markerType:"none", toolTipContent: null}, //A
-							{ x: 3.82, y: 340, indexLabel: "C", markerType:"none", toolTipContent: null}]//C
+							{ x: 3.55*1.15, y: 340, indexLabel: "C", markerType:"none", toolTipContent: null}]//C
 			},
 		]
 	});

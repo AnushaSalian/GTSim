@@ -27,13 +27,13 @@ const speedTimingDataset=[0,15,45,75,105,135,165,195,225,255,285,660,780,900,102
 	// });
 // });
 
-var questions=["The type of soil used to conduct the vane shear test is _________ .",
-			   "Top of shear vanes should be atleast _______ below the top surface ",
-			   "The diameter of the vane is ______ ."];
+var questions=["Filter paper is used in the consolidation test so that it restrains the soil particles to get inside the porous stone.",
+			   "Consolidation is a process to ________.",
+			   "Porous stones are submerged in distilled water for ____ hours."];
 			   
-var options2=[["Loam","Alluvial","Clay","Silt"],//Clay
-			  ["10mm","1.2cm","12mm","10cm"],//10mm
-			  ["10mm","12.5mm","1.3cm","2mm"]];//12.5mm
+var options2=[["True","False"],//True
+			  ["Expel air voids","Expel water voids","Compress the soil particle","None of the above"],//Expel water voids
+			  ["3-6","10-12","4-8","1-2"]];//4-8
 
 function validateFormativeQA(qn,ans,left,top)
 {
@@ -135,6 +135,8 @@ function commonStmtsInEvaluateCalculationAnswers(inputBoxId, checkBtnId, resultB
 	document.querySelector(checkBtnId).style.visibility="hidden";
 	if(simsubscreennum!==17)
 		document.querySelector('#nextButton').style.visibility="visible";
+	if(simsubscreennum===17)
+		document.querySelector("#inference").style.visibility="visible";
 }
 
 function evaluateCalculationAnswers(inputBoxId,rightAnswer,checkBtnId,resultBtnId,RgtWrngMarkId)
@@ -561,7 +563,8 @@ function magic()
 					document.getElementById("p7-2").style.visibility="visible";
 					setTimeout(function()
 					{
-						document.getElementById("nextButton").style.visibility="visible";
+						validateFormativeQA(1,1,"150px","100px");
+						// document.getElementById("nextButton").style.visibility="visible";
 					},1250);
 				},750);
 			}
@@ -616,7 +619,8 @@ function magic()
 					document.getElementById("10-2").style.visibility="hidden";
 					document.getElementById("10-3").style.visibility="visible";
 					setTimeout(function(){
-						document.getElementById("nextButton").style.visibility="visible";
+						// document.getElementById("nextButton").style.visibility="visible";
+						validateFormativeQA(0,0,"370px","120px");
 					},400);
 				},250);
 			});
@@ -1031,10 +1035,10 @@ function weightOfContainer(id)
 						}
 						setTimeout(function()
 						{
-							// if(id==6)
-							// {
-								// validateFormativeQA(0,2,"150px","100px");
-							// }
+							if(id==3)
+							{
+								validateFormativeQA(2,2,"150px","100px");
+							}
 							document.getElementById("nextButton").style.visibility="visible";
 						},500);
 					},1300);	
