@@ -124,7 +124,8 @@
 <div class="simsubscreen" id="canvas3" style="visibility:hidden">
     <strong class="incanvas">STEP </strong>
     <span class="circlebg">&nbsp;3&nbsp;</span>
-    <p class="steptext" style="font-family:verdana; font-size:14px;">Allow the sand of volume equal to that of the calibrating container to run out of cylinder by opening the shutter. Measure weight of calibrating cantainer with sand and without sand.</p>
+    <!-- <p class="steptext" style="font-family:verdana; font-size:14px;">Allow the sand of volume equal to that of the calibrating container to run out of cylinder by opening the shutter. Measure weight of calibrating cantainer with sand and without sand.</p> -->
+	<p class="steptext" style="font-family:verdana; font-size:14px;">Weigh the empty weight of calibrating cylinder. Allow the sand of volume equal to that of the calibrating container to run out of cylinder by opening the shutter. Measure the weight of calibrating container with sand.</p>
     <img id="1" style="position: absolute; left: 430px; top: 250px;" src="images/wm1.png"/>
     <img id="ca" style="position: absolute; left: 491px; top: 370px;" src="images/on.png"/>
     <img id="cb" style="position: absolute; left: 595px; top: 370px;" src="images/tare.png"/>
@@ -176,19 +177,19 @@
 		<td id="t1" style="border:1px solid black; padding:10px;">1138.685cm<sup>3</sup></td>
 	</tr>
 	<tr>
-		<td style="border:1px solid black; padding:5px;">Weight of SPC + sand, W<sub>1</sub></td>
+		<td style="border:1px solid black; padding:5px;">Weight of SPC with sand, W<sub>1</sub></td>
 		<td id="t2" style="border:1px solid black; padding:10px;"></td>
 	</tr>
 	<tr>
-		<td style="border:1px solid black; padding:5px;">Weight of calibrating container + sand, W<sub>2</sub></td>
+		<td style="border:1px solid black; padding:5px;">Weight of calibrating container with sand, W<sub>2</sub></td>
 		<td id="t3" style="border:1px solid black; padding:10px;"></td>
 	</tr>
 	<tr>
-		<td style="border:1px solid black; padding:5px;">Weight of empty calibrating container , W<sub>3</sub></td>
+		<td style="border:1px solid black; padding:5px;">Weight of empty calibrating container, W<sub>3</sub></td>
 		<td id="t4" style="border:1px solid black; padding:10px;"></td>
 	</tr>
 	<tr>
-		<td style="border:1px solid black; padding:5px;">Weight of sand in cone portion, W<sub>3</sub></td>
+		<td style="border:1px solid black; padding:5px;">Weight of sand in cone portion, W<sub>4</sub></td>
 		<td id="t5" style="border:1px solid black; padding:10px;"></td>
 	</tr>
 	<tr>
@@ -252,10 +253,10 @@
     <img id="d25" style="position: absolute; left: 38px; top: 290px;width:100px; height:53px;visibility:hidden;" src="images/key.png"/>
     <img id="d26" style="position: absolute; left: 50px; top: 293px;width:100px; height:53px;visibility:hidden;" src="images/key.png"/>
     <img id="pl" style="position: absolute; left: 150px; top:350px; visibility:hidden; " src="images/pl.png"/>
-    <p id="can5" style="position:absolute;top: 430px; left:5px; font-family:verdana; font-size:14px;">
+    <p id="can5" style="position:absolute;top: 440px; left:5px; font-family:verdana; font-size:14px;">
     <p id="v5" style="position:absolute;left: 540px; top:328px;font-family:verdana; font-size:14px;"></p>
-    <p id="can50" style="position:absolute;top: 430px; left:5px; font-family:verdana; font-size:14px;">
-    <p id="can500" style="position:absolute;top: 450px; left:5px; font-family:verdana; font-size:14px;">
+    <!-- <p id="can50" style="position:absolute;top: 320px; left:5px; font-family:verdana; font-size:14px;"> -->
+    <p id="can500" style="position:absolute;top: 360px; left:5px; font-family:verdana; font-size:14px;">
     <p id="can5000" style="position:absolute;top: 480px; left:5px; font-family:verdana; font-size:14px;">
 </div>
 
@@ -376,22 +377,25 @@
 
 <div id="canvas13" class="simsubscreen" style="visibility:hidden;">
 <h3 style="position:absolute; left:0px; top:10px;">&nbsp;Observations: Water content determination</h3>
-	<table id="dataTable" style="position:absolute; left:5px; top:70px; border:1px solid lightgrey; font-size:13px; text-align:center;">
+	<table id="dataTable" style="position:absolute; left:5px; top:70px; border:1px solid #000000; font-size:13px; text-align:center;">
 		<tr>
-			<td colspan="3" style="border:1px solid lightgrey; padding:5px;">Bulk density of soil, <sup>&rho;</sup><sub>soil</sub>, (g/cc)</td>
-			<td id="t21" colspan="2" style="border:1px solid lightgrey; padding:10px;"></td>
+			<td colspan="3" style="border:1px solid black; padding:5px;">Bulk density of soil, <sup>&rho;</sup><sub>soil</sub> (g/cc)</td>
+			<td id="t21" colspan="2" style="border:1px solid black; padding:10px;"></td>
+		</tr><tr>
+			<td colspan="3" style="border:1px solid black; padding:5px;">Bulk density of sand, <sup>&rho;</sup><sub>sand</sub> (g/cc)</td>
+			<td id="t21Sand" colspan="2" style="border:1px solid black; padding:10px;"></td>
 		</tr>
 		<tr>
-			<td style="border:1px solid lightgrey; padding:5px;">Trial No.</td>
-			<td style="border:1px solid lightgrey; padding:5px;">Weight of container, w<sub>1</sub>, (g)</td>
-			<td style="border:1px solid lightgrey; padding:5px;">Weight of wet soil, w<sub>2</sub>, (g)</td>
-			<td style="border:1px solid lightgrey; padding:5px;">Weight of dry soil, w<sub>3</sub>, (g)</td>
-			<td style="border:1px solid lightgrey; padding:5px;">Moisture content, W, (g)</td>
+			<td style="border:1px solid black; padding:5px; text-align:center;">Trial No.</td>
+			<td style="border:1px solid black; padding:5px; text-align:center;">Weight of container, w<sub>1</sub> (g)</td>
+			<td style="border:1px solid black; padding:5px; text-align:center;">Weight of wet soil, w<sub>2</sub> (g)</td>
+			<td style="border:1px solid black; padding:5px; text-align:center;">Weight of dry soil, w<sub>3</sub> (g)</td>
+			<td style="border:1px solid black; padding:5px; text-align:center;">Moisture content, W (g)</td>
 		</tr>
 	</table>
 
-	<h3 style="position:absolute; left:0px; top:280px;">&nbsp;Calculation:</h3>
-	<table style="position:absolute; left:0px; top:310px; font-size:14px; text-align:left; ">
+	<h3 style="position:absolute; left:0px; top:300px;">&nbsp;Calculation:</h3>
+	<table style="position:absolute; left:0px; top:320px; font-size:14px; text-align:left; ">
 		<tr>
 			<td style="padding:5px; border:1px solid transparent;">Dry density of soil, <sup>&rho;</sup><sub>d</sub> =</td>
 			<td id="" style="padding:10px;border:1px solid transparent;">
@@ -408,9 +412,9 @@
 			</td>
 		</tr>
 	</table>
-	<div id="inference" style="position:absolute; left:5px; top:370px; visibility:hidden;">
+	<div id="inference" style="position:absolute; left:5px; top:390px; visibility:hidden;">
 		<h3>Inference:</h3>
-      <p style="font-size:14px;">The dry density of sandy soils can be as high as 1.6 g/cc and that for clayey soils are around 1.1 g/cc. Dry density value obtained is on the lower side (i.e. 1.14 g/cc), implying it is  clayey soil.</p>
+      <p style="font-size:14px; line-height:150%;">The dry density of sandy soils can be as high as 1.6 g/cc and that for clayey soils are around 1.1 g/cc. Dry density value obtained is on the lower side (i.e. 1.14 g/cc), implying it is  clayey soil.</p>
 	</div>
 </div>
 

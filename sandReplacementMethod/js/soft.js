@@ -81,8 +81,8 @@ function generate_table()
     {
         $("#dataTable").delay()
             .queue(function (generate_table) {
-                           $(this).append("<tr><td >" + dataset3[j][0]
-                               +  "</td><td>"+dataset3[j][1]+"</td><td>"+dataset3[j][2]+"</td><td>"+dataset3[j][3]+"</td><td>"+dataset3[j][4].toFixed(2)+"</td></tr>");
+                           $(this).append("<tr><td style='border:1px solid black; text-align:center;'>" + dataset3[j][0]
+                               +  "</td><td style='border:1px solid black; text-align:center;'>"+dataset3[j][1]+"</td><td  style='border:1px solid black; text-align:center;'>"+dataset3[j][2]+"</td><td style='border:1px solid black; text-align:center;'>"+dataset3[j][3]+"</td><td  style='border:1px solid black; text-align:center;'>"+dataset3[j][4].toFixed(2)+"</td></tr>");
                 j++;
                 generate_table();
             });
@@ -404,7 +404,7 @@ function magic()
 																							document.getElementById('c7').style.visibility = "visible";
 																							document.getElementById('c10').style.visibility = "hidden";
 																							document.getElementById('c11').style.visibility = "hidden";
-																							document.getElementById('can4').innerHTML = "Weight of Sand in Conical Portion, (W<sub>2</sub>)  =  <u>3970 g</u>";
+																							document.getElementById('can4').innerHTML = "weight of calibrating container with sand, (W<sub>2</sub>) = <u>3970 g</u>";
 																							document.getElementById('v4').innerHTML = "3970.00";
 																							setTimeout(function()
 																							{
@@ -533,7 +533,7 @@ function magic()
 																				document.getElementById('v4a').innerHTML = "280.00";
 																				setTimeout(function()
 																				{
-																					document.getElementById('p4-1').innerHTML = "Weight of calibrating container + sand, W<sub>2</sub>=  <u>3970  g</u>";
+																					document.getElementById('p4-1').innerHTML = "Weight of calibrating container with sand, W<sub>2</sub>=  <u>3970  g</u>";
 																					document.getElementById('p4-2').innerHTML = "Weight of empty calibrating container , W<sub>3</sub> =  <u>1900  g</u>";
 																					document.getElementById('p4-3').innerHTML = "Weight of sand in cone portion, W<sub>4</sub> =  <u>280  g</u>";
 																					document.getElementById('p4-4').innerHTML = "Weight of sand in calibrating container without cone portion, W<sub>5</sub> or W<sub>a</sub> = W<sub>2</sub>-W<sub>3</sub>-W<sub>4</sub> =  <u>1790  g</u>";
@@ -887,6 +887,7 @@ function magic()
 
 	else if(simsubscreennum == 13)
 	{
+		document.getElementById('trial').style.visibility = "hidden";
 		document.getElementById('wm9').style.visibility = "hidden";
 		document.getElementById('on9').style.visibility = "hidden";
 		document.getElementById('tare9').style.visibility = "hidden";
@@ -896,6 +897,7 @@ function magic()
 		document.getElementById("nextButton").style.visibility = "hidden";
 
 		document.getElementById("t21").innerHTML=dsoil.toFixed(2);
+		document.getElementById("t21Sand").innerHTML=dsand.toFixed(2);
 		generate_table();
 				
 		avg=((dataset3[0][4]+dataset3[1][4]+dataset3[2][4])/3);
@@ -1214,12 +1216,12 @@ function step52()
 										document.getElementById('d29').style.visibility = "hidden";
 										setTimeout(function () 
 										{
-											document.getElementById('can5').innerHTML = "Weight of sand pouring cylinder + sand after poured in to the hole, W<sub>6</sub> =  <u>4855g</u>";
+											document.getElementById('can5').innerHTML = "Weight of sand pouring cylinder with sand after poured in to the hole, W<sub>6</sub> = 4855g";
 											document.getElementById('v5').innerHTML = "4855.00";
 											setTimeout(function () 
 											{
 												document.getElementById('d27').style.visibility = "hidden";
-												document.getElementById('can5').style.visibility = "hidden";
+												// document.getElementById('can5').style.visibility = "hidden";
 												document.getElementById('d24').style.visibility = "hidden";
 												document.getElementById('d28').style.visibility = "hidden";
 												document.getElementById('pl').style.visibility = "visible";
@@ -1243,7 +1245,7 @@ function step52()
 																{
 																	document.getElementById('pl').style.visibility = "visible";
 																	document.getElementById('v5').innerHTML = "1540.00";
-																	document.getElementById('can500').innerHTML = "Weight of wet soil from the hole, W<sub>w</sub>=  <u>1540.00g</u>";
+																	document.getElementById('can500').innerHTML = "Weight of wet soil from the hole, W<sub>w</sub>=  <u>1540.00g</u> <br><br> Weight of Sand Pouring Cylinder with sand, W<sub>1</sub> =  6595g";
 																	setTimeout(function()
 																	{
 																		document.getElementById('can5000').innerHTML = "Weight of sand in hole, W<sub>b</sub> = (W<sub>1</sub> - W<sub>6</sub>) =  <u>1740g</u>";
