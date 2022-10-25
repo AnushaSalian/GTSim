@@ -1764,7 +1764,6 @@ span.frac > span {display: none;}
     100%{left: 20px; top: 280px;}
 }
 
-
 @-webkit-keyframes rotTrowel
 {
 	0% {transform:rotate(0deg)}
@@ -1774,4 +1773,17 @@ span.frac > span {display: none;}
 {
 	0% {transform:rotate(0deg)}
 	100%{transform:rotate(60deg)}
+}
+
+@-webkit-keyframes placeMercuryWIthContainer
+{
+	0%{left:71px; top:385.5px;}
+	40%{left: 71px; top: 261.5px;}
+    100%{left:379px; top:285.5px;}
+}
+@keyframes placeMercuryWIthContainer
+{
+	0%{left:71px; top:385.5px;}
+	40%{left: 71px; top: 261.5px;}
+    100%{left:379px; top:285.5px;}
 }

@@ -82,7 +82,7 @@ function generate_table()
 
 function navNext()
 {
-	for(temp=0;temp<=19;temp++)
+	for(temp=0;temp<=18;temp++)
 	{
 		document.getElementById("canvas"+temp).style.visibility="hidden";
 	}
@@ -117,84 +117,85 @@ function blinkArrow(l,t,d,h)
 
 function magic()
 {
+	// if(simsubscreennum==1)
+	// {
+		// repeat+=1;
+		 // // document.getElementById('mark1').style.visibility="hidden";
+		 // // document.getElementById('mark2').style.visibility="hidden";
+		 // // document.getElementById('mark3').style.visibility="hidden";
+		// document.getElementById('1-1').style.visibility="visible";
+		// document.getElementById('1-3').style.visibility="visible";
+		// setTimeout(function()
+		// {
+			// blinkArrow(277.5,490,90,30);
+			// document.getElementById("1-1").onclick=function()
+			// {
+				// myStopFunction();
+				// document.getElementById("1-1").onclick="";
+				// document.getElementById("1-1").style.visibility="hidden";
+				// document.getElementById("1-0").style.backgroundColor="lightgrey";
+				// setTimeout(function()
+				// {
+					// document.getElementById("1-2").style.visibility="visible";
+					// document.getElementById("p1-1").innerHTML="000.10";
+					// setTimeout(function()
+					// {
+						// blinkArrow(285,180,360,40);
+						// document.getElementById("1-2").onclick=function()
+						// {
+							// myStopFunction();
+							// document.getElementById("1-2").onclick="";
+							// document.getElementById("1-2").style.animation="movePlate 1.5s forwards";
+							// setTimeout(function()
+							// {
+								// blinkArrow(387.5,490,90,30);
+								// document.getElementById("1-3").onclick=function()
+								// {
+									// myStopFunction();
+									// document.getElementById("1-3").onclick="";
+									// document.getElementById("1-3").style.visibility="hidden";
+									// document.getElementById("p1-1").innerHTML="000.00";
+									// setTimeout(function()
+									// {
+										// document.getElementById("1-4").style.visibility="visible";
+										// blinkArrow(630,190,360,40);
+										// document.getElementById("1-4").onclick=function()
+										// {
+											// myStopFunction();
+											// document.getElementById("1-4").onclick="";
+											// document.getElementById('1-4').style.transformOrigin = "100% 80%";
+											// document.getElementById('1-4').style.animation = "rotateSieve 1.5s forwards ";
+											// setTimeout(function()
+											// {
+												// document.getElementById('1-4').style.visibility="hidden";
+												// document.getElementById('1-5').style.visibility="visible";
+												// setTimeout(function()
+												// {
+													// document.getElementById("p1-1").innerHTML="100.00";
+													// document.getElementById("nextButton").style.visibility="visible";
+												// },500);
+											// },1500);
+										// }	
+									// },1000);
+								// }
+							// },1500);
+							// }
+					// },750);
+				// },650);
+			// }
+		// },500);
+	// }
+	
 	if(simsubscreennum==1)
 	{
-		repeat+=1;
-		 // document.getElementById('mark1').style.visibility="hidden";
-		 // document.getElementById('mark2').style.visibility="hidden";
-		 // document.getElementById('mark3').style.visibility="hidden";
-		document.getElementById('1-1').style.visibility="visible";
-		document.getElementById('1-3').style.visibility="visible";
-		setTimeout(function()
-		{
-			blinkArrow(277.5,490,90,30);
-			document.getElementById("1-1").onclick=function()
-			{
-				myStopFunction();
-				document.getElementById("1-1").onclick="";
-				document.getElementById("1-1").style.visibility="hidden";
-				document.getElementById("1-0").style.backgroundColor="lightgrey";
-				setTimeout(function()
-				{
-					document.getElementById("1-2").style.visibility="visible";
-					document.getElementById("p1-1").innerHTML="000.10";
-					setTimeout(function()
-					{
-						blinkArrow(285,180,360,40);
-						document.getElementById("1-2").onclick=function()
-						{
-							myStopFunction();
-							document.getElementById("1-2").onclick="";
-							document.getElementById("1-2").style.animation="movePlate 1.5s forwards";
-							setTimeout(function()
-							{
-								blinkArrow(387.5,490,90,30);
-								document.getElementById("1-3").onclick=function()
-								{
-									myStopFunction();
-									document.getElementById("1-3").onclick="";
-									document.getElementById("1-3").style.visibility="hidden";
-									document.getElementById("p1-1").innerHTML="000.00";
-									setTimeout(function()
-									{
-										document.getElementById("1-4").style.visibility="visible";
-										blinkArrow(630,190,360,40);
-										document.getElementById("1-4").onclick=function()
-										{
-											myStopFunction();
-											document.getElementById("1-4").onclick="";
-											document.getElementById('1-4').style.transformOrigin = "100% 80%";
-											document.getElementById('1-4').style.animation = "rotateSieve 1.5s forwards ";
-											setTimeout(function()
-											{
-												document.getElementById('1-4').style.visibility="hidden";
-												document.getElementById('1-5').style.visibility="visible";
-												setTimeout(function()
-												{
-													document.getElementById("p1-1").innerHTML="100.00";
-													document.getElementById("nextButton").style.visibility="visible";
-												},500);
-											},1500);
-										}	
-									},1000);
-								}
-							},1500);
-							}
-					},750);
-				},650);
-			}
-		},500);
-	}
-	
-	else if(simsubscreennum==2)
-	{
 		//refresh();
-		document.getElementById('1-1').style.visibility="hidden";
-		document.getElementById('1-3').style.visibility="hidden";
-		document.getElementById("1-2").style.visibility="hidden";
-		document.getElementById("1-4").style.visibility="hidden";
-		document.getElementById("1-5").style.visibility="hidden";
-		document.getElementById("nextButton").style.visibility = "hidden";
+		repeat+=1;
+		// document.getElementById('1-1').style.visibility="hidden";
+		// document.getElementById('1-3').style.visibility="hidden";
+		// document.getElementById("1-2").style.visibility="hidden";
+		// document.getElementById("1-4").style.visibility="hidden";
+		// document.getElementById("1-5").style.visibility="hidden";
+		// document.getElementById("nextButton").style.visibility = "hidden";
 		
 		document.getElementById('2-1').style.visibility="visible";
         document.getElementById('2-2').style.visibility="visible";
@@ -249,7 +250,7 @@ function magic()
 		},800);
 	}
 	
-	else if(simsubscreennum==3)
+	else if(simsubscreennum==2)
 	{
 		//refresh();
 		for(var i=1; i<=3; i++)
@@ -325,7 +326,7 @@ function magic()
 		}
 	}
 	
-	else if(simsubscreennum==4)
+	else if(simsubscreennum==3)
 	{
 		for(var i=1; i<=12; i++)
 		{
@@ -436,7 +437,8 @@ function magic()
 																			setTimeout(function()
 																			{
 																				document.getElementById('4-15').style.visibility="visible";
-																				document.getElementById('p4-1').innerHTML="30";
+																				// document.getElementById('p4-1').innerHTML="30";
+																				document.getElementById('p4-1').innerHTML="100";
 																				setTimeout(function()
 																				{
 																					document.getElementById('4-19').style.visibility="hidden";
@@ -465,7 +467,7 @@ function magic()
 		}
 	}
 	
-	else if(simsubscreennum==5)
+	else if(simsubscreennum==4)
 	{
 		document.getElementById('4-01').style.visibility="hidden";
 		document.getElementById('4-02').style.visibility="hidden";
@@ -537,14 +539,14 @@ function magic()
 		//}
 	}
 	
-	else if(simsubscreennum == 6)
+	else if(simsubscreennum == 5)
 	{
 		//refresh();
 		document.getElementById("5-8").style.visibility="hidden";
 		document.getElementById("5-14").style.visibility="hidden";
 		weightOfContainer(6);
 	}
-	else if(simsubscreennum == 7)
+	else if(simsubscreennum == 6)
 	{
 		document.getElementById("nextButton").style.visibility = "hidden";	
 		setTimeout(function()
@@ -607,12 +609,12 @@ function magic()
 		},500);
 	}
 	
-	else if(simsubscreennum == 8)
+	else if(simsubscreennum == 7)
 	{
 		document.getElementById("7-5").style.visibility = "hidden";
 		weightOfContainer(8);
 	}	
-	else if(simsubscreennum == 9)
+	else if(simsubscreennum == 8)
 	{
 		document.getElementById("nextButton").style.visibility = "hidden";
 		document.getElementById("9-11").style.visibility = "visible";
@@ -686,7 +688,7 @@ function magic()
 		}
 	}
      
-	else if(simsubscreennum == 10)
+	else if(simsubscreennum == 9)
 	{
 		document.getElementById("incDoor9-1").style.visibility="hidden";
 		document.getElementById("incDoor9-2").style.visibility="hidden";
@@ -695,7 +697,7 @@ function magic()
 		weightOfContainer(10);
 	}
 	
-	else if(simsubscreennum == 11)
+	else if(simsubscreennum == 10)
 	{
 		setTimeout(function()
 		{
@@ -748,7 +750,7 @@ function magic()
 		},300);
 	}
 	
-	else if(simsubscreennum == 12)
+	else if(simsubscreennum == 11)
 	{
 		document.getElementById("11-5").style.visibility="hidden";
 		document.getElementById("11-6").style.visibility="hidden";
@@ -756,11 +758,11 @@ function magic()
 		weightOfContainer(12);
 	}
 	
-	else if(simsubscreennum == 13)
+	else if(simsubscreennum == 12)
 	{
 		weightOfContainer(13);
 	}
-	else if(simsubscreennum == 14)
+	else if(simsubscreennum == 13)
 	{
 		setTimeout(function()
 		{
@@ -812,14 +814,14 @@ function magic()
 			}
 		},300);
 	}
-	else if(simsubscreennum==15)
+	else if(simsubscreennum==14)
 	{
 		document.getElementById("14-5").style.visibility="hidden";
 		document.getElementById("14-6").style.visibility="hidden";
 		document.getElementById("14-7").style.visibility="hidden";
 		weightOfContainer(15);
 	}
-	else if(simsubscreennum == 16)
+	else if(simsubscreennum == 15)
 	{
 		setTimeout(function()
 		{
@@ -843,7 +845,7 @@ function magic()
 			}
 		},350);
 	}
-	else if(simsubscreennum == 17)
+	else if(simsubscreennum == 16)
 	{
 		document.getElementById("16-2").style.visibility="hidden";
 		document.getElementById("16-5").style.visibility="hidden";
@@ -878,7 +880,7 @@ function magic()
 			}
 		},350);
 	}
-	else if(simsubscreennum==18)
+	else if(simsubscreennum==17)
 	{
 		document.getElementById("17-0").style.visibility="hidden";
 		document.getElementById("17-1").style.visibility="hidden";
@@ -920,7 +922,7 @@ function magic()
 			checkResult(id3, v1, mark3, chk3, res3, cnt);
 		}
 	}
-	else if(simsubscreennum==19)
+	else if(simsubscreennum==18)
 	{
 		document.getElementById("drySoil").style.visibility="hidden";
 		document.getElementById("wetSoil").style.visibility="hidden";
@@ -933,7 +935,7 @@ function magic()
 		document.getElementById("var").innerHTML="Weight of wet soil, W<sub>4</sub> = "+w4.toFixed(2)+" g</br> Weight of dry soil pat, W<sub>d</sub> = "+wd.toFixed(2)+" g</br> Volume of wet soil pat, V<sub>1</sub> = "+v1.toFixed(2)+" g <br> Unit weight of water, &rho;<sub>w</sub> =  1 g/cm3";
 		v2 = (dataset[p][5] - dataset[p][6])/(13.6);
 		ws = (((w4 - wd)-(v1 - v2))/ wd)*100;
-		console.log(p,w4,wd,v1,v2,ws);
+		// console.log(p,w4,wd,v1,v2,ws);
 		document.getElementById("chk4").onclick=function()
 		{
 			cnt=4;
