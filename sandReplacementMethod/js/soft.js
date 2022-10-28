@@ -1216,7 +1216,8 @@ function step52()
 										document.getElementById('d29').style.visibility = "hidden";
 										setTimeout(function () 
 										{
-											document.getElementById('can5').innerHTML = "Weight of sand pouring cylinder with sand after poured in to the hole, W<sub>6</sub> = 4855g";
+											// document.getElementById('can5').innerHTML = "Weight of sand pouring cylinder with sand after poured in to the hole, W<sub>6</sub> = 4855g";
+											document.getElementById('can5').innerHTML = "Weight of sand pouring cylinder with leftover sand after in-situ procedure, W<sub>6</sub> = 4855g";
 											document.getElementById('v5').innerHTML = "4855.00";
 											setTimeout(function () 
 											{
