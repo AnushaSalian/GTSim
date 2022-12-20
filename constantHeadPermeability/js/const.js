@@ -15,8 +15,8 @@ const dataset=[[240,19.5],
 			   [240,22]];
 
 //Calculation
-const mouldArea=Math.PI*(mouldDia/4);
-const mouldVolume=mouldArea*mouldHeight*10;
+const mouldArea=Math.PI*(mouldDia/4)*10;
+const mouldVolume=mouldArea*mouldHeight;
 let totalOfQ=0, avgOfQ=0;//Average of volume of water collected in measuring jar
 for(i=0;i<dataset.length;i++)
 	totalOfQ+=dataset[i][1];
@@ -25,13 +25,13 @@ avgOfQ=totalOfQ/dataset.length;
 const coefficient=(avgOfQ*mouldHeight)/(mouldArea*dataset[0][0]*constHead)*1000;
 
 // Formative questions
-var questions=["Filter paper is used in the consolidation test so that it restrains the soil particles to get inside the porous stone.",
-			   "Consolidation is a process to ________.",
-			   "Porous stones are submerged in distilled water for ____ hours."];
+var questions=["The filter paper is placed inside the permeameter so that soil particles do not clog the pores present in the porous stones.",
+			   "The number of blows to be given for each soil layer is _____.",
+			   "What is the constant head of water is</br> maintained for this experiment?"];
 			   
 var options2=[["True","False"],//True
-			  ["Expel air voids","Expel water voids","Compress the soil particle","None of the above"],//Expel water voids
-			  ["3-6","10-12","4-8","1-2"]];//4-8
+			  ["6","7","5","3"],//5
+			  ["65.7cm","67.5cm","65.5cm","67.8cm"]];//67.5cm
 
 // font-size:14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; :::: formativeQuestDiv
 function validateFormativeQA(qn,ans,left,top)
@@ -43,7 +43,7 @@ function validateFormativeQA(qn,ans,left,top)
 	el = document.createElement("option");
 	el.textContent = " ";
 	el.value = " ";
-	answer.appendChild(el);
+	document.querySelector(".answer").appendChild(el);
   
 	for(j=0;j<options2[qn].length;j++)
 	{
@@ -51,7 +51,7 @@ function validateFormativeQA(qn,ans,left,top)
 		el = document.createElement("option");
 		el.textContent = opt;
 		el.value = opt;
-		answer.appendChild(el);
+		document.querySelector(".answer").appendChild(el);
 		$(".answer").change(function()
 		{
 			ca=$(this).children("option:selected").val();
@@ -273,7 +273,8 @@ function displayNote(note="Fasten all the remaining bolts.",posLeft,posTop)
 				document.querySelector(".setup6-16").style.visibility="visible";
 				setTimeout(function()
 				{
-					displayNextButton();
+					// displayNextButton();
+					validateFormativeQA(1,2,"100px","150px");
 				},500);
 			}
 			if(simsubscreennum===7)
@@ -284,7 +285,8 @@ function displayNote(note="Fasten all the remaining bolts.",posLeft,posTop)
 				{
 					myStopFunction();
 					document.querySelector(".setup7-6").style="height: 8px; position: absolute; left: 192px; top: 344px; width: 15px; background-color:#fff;";
-					displayNextButton();
+					// displayNextButton();
+					validateFormativeQA(0,0,"350px","150px");
 				});
 			}
 			if(simsubscreennum==8)
@@ -599,6 +601,7 @@ function magic()
 	}
 	if(simsubscreennum===7)
 	{
+		document.querySelector(".nextButton").style.visibility="hidden";
 		document.querySelector(".setup6-4").style.visibility="hidden";
 		document.querySelector(".setup6-7").style.visibility="hidden";
 		document.querySelector(".setup6-9").style.visibility="hidden";
@@ -629,6 +632,7 @@ function magic()
 	}
 	if(simsubscreennum===8)
 	{
+		document.querySelector(".nextButton").style.visibility="hidden";
 		setTimeout(function()
 		{
 			blinkArrow(342,331,180,30);
@@ -666,12 +670,15 @@ function magic()
 			},25000);
 			setTimeout(function()
 			{
-				displayNextButton();
+				validateFormativeQA(2,1,"43px","417px");
+				// displayNextButton();
 			},19000);
 		},250);
 	}
 	if(simsubscreennum===11)
 	{
+		variables.classList.remove("hidden");
+		varDescription.innerHTML="Constant head, h = 67.5cm</br>Height of the mould, L = "+mouldHeight+" cm</br>Diameter of the mould, d = "+mouldDia+" cm</br>Area of mould, A = &pi; &times; <span class='frac'><sup>d<sup>2</sup></sup><span>&frasl;</span><sub>4</sub></span>";
 		document.querySelector(".setup9-4b").style.visibility="hidden";
 		calcTrack=1;
 		create_totalTable(".table11-1",0);

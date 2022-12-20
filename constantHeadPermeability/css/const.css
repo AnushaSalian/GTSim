@@ -156,10 +156,15 @@ body{
 	position:absolute; 
 	font-size:14px; 
 	background-color:grey; 
+	line-height:1.5;
 	color:white; 
 	padding:7.5px; 
 	border-radius:5px; 
 	visibility:hidden;
+}
+
+.formativeQuestDiv .q,  .formativeQuestDiv .answer{
+	margin-bottom:5px;
 }
 
 #arrow1{
@@ -185,15 +190,15 @@ body{
 .human{
 	position:absolute; 
 	left: 180px;
-	top: 278px;
+	top: 227px;
 	height: 200px;
 }
 
 .full-setup{
 	position:absolute; 
-	left:320px; 
-	top:210px; 
-	width:20%;
+	left: 320px;
+	top: 170px;
+	width: 14%;
 }
 
 /* -----------------------------Canvas 1 -------------------------------------*/
@@ -1241,12 +1246,12 @@ th,td{
 	text-align:center;
 }
 
-.const{
-	position:absolute;
-	left: 10px;
-	top: 195px;
-	font-size:12px;
-}
+/* .const{ */
+	/* position:absolute; */
+	/* left: 10px; */
+	/* top: 195px; */
+	/* font-size:12px; */
+/* } */
 
 .calculation{
 	position:absolute;
@@ -1319,7 +1324,11 @@ th,td{
 /* ---------------------------------------------------------------- */
 
 .variables{
+	line-height:2;
 	font-size:14px;
+	position: absolute;
+	left: 430px;
+	top: 83px;
 }
 
 .variables-description{
