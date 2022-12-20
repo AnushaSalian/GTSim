@@ -1,6 +1,6 @@
 //Variables declaration
 let myInt; let calcTrack=0;
-let simsubscreennum=6, temp=0;
+let simsubscreennum=0, temp=0;
 const mouldDia=10, mouldHeight=12.7, constHead=67.5;
 
 const nextButton=document.querySelector(".nextButton");
