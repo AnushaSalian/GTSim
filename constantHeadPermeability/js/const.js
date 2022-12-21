@@ -1,6 +1,6 @@
 //Variables declaration
 let myInt; let calcTrack=0;
-let simsubscreennum=0, temp=0;
+let simsubscreennum=6, temp=0;
 const mouldDia=10, mouldHeight=12.7, constHead=67.5;
 
 const nextButton=document.querySelector(".nextButton");
@@ -222,7 +222,8 @@ function step8continued()
 					{
 						myStopFunction();
 						document.querySelector(".setup8-4").style.visibility="hidden";
-						displayNextButton();
+						// displayNextButton();
+						document.querySelector(".nextButton").style.visibility="visible";
 					});
 				},500);
 			});
@@ -242,7 +243,8 @@ function step9continued()
 			document.querySelector(".setup9-4b").style.visibility="visible";
 			
 			setTimeout(function(){
-				displayNextButton();
+				// displayNextButton();
+				document.querySelector(".nextButton").style.visibility="visible";
 			},500);
 		},500);
 	});
@@ -633,6 +635,7 @@ function magic()
 	if(simsubscreennum===8)
 	{
 		document.querySelector(".nextButton").style.visibility="hidden";
+		// nextButton.classlist.add("hidden");
 		setTimeout(function()
 		{
 			blinkArrow(342,331,180,30);
@@ -650,11 +653,13 @@ function magic()
 	}
 	if(simsubscreennum===9)
 	{
+		document.querySelector(".nextButton").style.visibility="hidden";
 		document.querySelector(".setup8-5b").style.visibility="hidden";
 		displayNote("Water pipe is removed from outlet valve and connected to inlet valve at the top. Now start the water supply maintaining a constant head of water.","450","120");
 	}
 	if(simsubscreennum===10)
 	{
+		document.querySelector(".nextButton").style.visibility="hidden";
 		document.querySelector(".setup9-6").style.visibility="hidden";
 		document.querySelector(".drop10-1").style.animation="drops 0.5s linear infinite";
 		setTimeout(function()
@@ -677,6 +682,7 @@ function magic()
 	}
 	if(simsubscreennum===11)
 	{
+		document.querySelector(".nextButton").style.visibility="hidden";
 		variables.classList.remove("hidden");
 		varDescription.innerHTML="Constant head, h = 67.5cm</br>Height of the mould, L = "+mouldHeight+" cm</br>Diameter of the mould, d = "+mouldDia+" cm</br>Area of mould, A = &pi; &times; <span class='frac'><sup>d<sup>2</sup></sup><span>&frasl;</span><sub>4</sub></span>";
 		document.querySelector(".setup9-4b").style.visibility="hidden";
