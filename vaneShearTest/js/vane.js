@@ -568,7 +568,7 @@ function magic()
 	else if(simsubscreennum==11)
 	{
 		document.getElementById("12-7").style.visibility="hidden";
-		document.getElementById("13-7").style.visibility="visible";
+		// document.getElementById("13-7").style.visibility="visible";
 		document.getElementById("13-5").style.visibility="visible";
 		document.getElementById("13-6").style.visibility="visible";
 		document.getElementById("p13-1").style.visibility="visible";
@@ -579,7 +579,7 @@ function magic()
 		{
 			console.log("10");
 			document.getElementById("13-6").style="position:absolute; left: 460px; top: 143px;";
-			document.getElementById("13-7").style="position:absolute; left: 430px; top: 143px; height:40px;";
+			document.getElementById("13-7").style="position:absolute; left: 430px; top: 143px; height:40px; visibility:hidden;";
 			document.getElementById("p13-1").innerHTML=Number(dataset[1][p1])-10;
 			document.getElementById("p13-2").innerHTML=Number(dataset[1][p1]);
 			document.getElementById("p13-3").innerHTML=Number(dataset[1][p1])+10;
@@ -588,7 +588,7 @@ function magic()
 		{
 			console.log("9");
 			document.getElementById("13-6").style="position:absolute;  left: 499px; top: 143px;";
-			document.getElementById("13-7").style="position:absolute; left: 465px; top: 143px; height:40px;";
+			document.getElementById("13-7").style="position:absolute; left: 465px; top: 143px; height:40px; visibility:hidden;";
 			document.getElementById("p13-1").innerHTML=Number(dataset[1][p1])-19;
 			document.getElementById("p13-2").innerHTML=Number(dataset[1][p1])-9;
 			document.getElementById("p13-3").innerHTML=Number(dataset[1][p1])+1;
@@ -597,7 +597,7 @@ function magic()
 		{
 			console.log("7");
 			document.getElementById("13-6").style="position:absolute;  left: 489.5px; top: 143px;";
-			document.getElementById("13-7").style="position:absolute; left: 450px; top: 143px; height:40px;";
+			document.getElementById("13-7").style="position:absolute; left: 393px; top: 143px; height:40px;visibility:hidden;";
 			document.getElementById("p13-1").innerHTML=Number(dataset[1][p1])-17;
 			document.getElementById("p13-2").innerHTML=Number(dataset[1][p1])-7;
 			document.getElementById("p13-3").innerHTML=Number(dataset[1][p1])+3;
@@ -606,7 +606,7 @@ function magic()
 		{
 			console.log("5");
 			document.getElementById("13-6").style="position:absolute; left: 487px; top: 143px;";
-			document.getElementById("13-7").style="position:absolute; left: 473px; top: 143px; height:40px;";
+			document.getElementById("13-7").style="position:absolute; left: 387px; top: 143px; height:40px; visibility:hidden;";
 			document.getElementById("p13-1").innerHTML=Number(dataset[1][p1])-15;
 			document.getElementById("p13-2").innerHTML=Number(dataset[1][p1])-5;
 			document.getElementById("p13-3").innerHTML=Number(dataset[1][p1])+5;
@@ -615,7 +615,7 @@ function magic()
 		{
 			console.log("3");
 			document.getElementById("13-6").style="position:absolute; left: 473px; top: 143px;";
-			document.getElementById("13-7").style="position:absolute; left: 445px; top: 143px; height:40px;";
+			document.getElementById("13-7").style="position:absolute; left: 387px; top: 143px; height:40px; visibility:hidden;";
 			document.getElementById("p13-1").innerHTML=Number(dataset[1][p1])-13;
 			document.getElementById("p13-2").innerHTML=Number(dataset[1][p1])-3;
 			document.getElementById("p13-3").innerHTML=Number(dataset[1][p1])+3;
@@ -624,7 +624,7 @@ function magic()
 		{
 			console.log("2");
 			document.getElementById("13-6").style="position:absolute; left: 473px; top: 143px;";
-			document.getElementById("13-7").style="position:absolute; left: 439.5px; top: 143px; height:40px;";
+			document.getElementById("13-7").style="position:absolute; left: 439.5px; top: 143px; height:40px; visibility:hidden";
 			document.getElementById("p13-1").innerHTML=Number(dataset[1][p1])-12;
 			document.getElementById("p13-2").innerHTML=Number(dataset[1][p1])-2;
 			document.getElementById("p13-3").innerHTML=Number(dataset[1][p1])+2;
