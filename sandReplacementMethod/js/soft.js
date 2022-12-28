@@ -5,6 +5,7 @@ var dataset2=[4855,1540,1740];//dataset for bulk ensity of soil
 var dataset3=[[1,28.3,50.12,47.45,0.139425587],//dry density of soil
 			  [2,29.39,53.42,49.91,0.171052632],
 			  [3,27.36,59.94,51.65,0.341292713]];
+const bulkDen=1.571;
 
 var d=10, h=14.5, vol=1138.685;
 
@@ -683,7 +684,7 @@ function magic()
 		document.getElementById('db').style.visibility = "hidden";
 		
 		document.getElementById("t11").innerHTML=dataset1[0]+" g";
-		document.getElementById("t12").innerHTML=vol+" cm<sup>3</sup>";
+		document.getElementById("t12").innerHTML=bulkDen+" g/cc";
 		document.getElementById("t13").innerHTML=dataset2[0]+" g";
 		document.getElementById("t14").innerHTML=dataset2[1]+" g";
 		document.getElementById("t15").innerHTML=dataset1[0]-dataset2[0]+" g";
