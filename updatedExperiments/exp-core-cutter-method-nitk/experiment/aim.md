@@ -1,0 +1,1 @@
+To determine the field or in-situ density of soil by the core cutter method.

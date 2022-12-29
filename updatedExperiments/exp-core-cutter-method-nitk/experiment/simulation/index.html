@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<script type="text/javascript" src="js/jquerymin.js"></script>
+<link rel="stylesheet" href="css/sgca.css" />
+<script type="text/javascript" src="js/sgca.js"></script>
+<link rel="stylesheet" href="css/mathstyle.css" />
+<script>
+	var simsubscreennum = 0;
+</script>
+</head>
+<body style="margin:0; font-family:verdana; font-size:14px;">
+<div id="simscreen">
+<div id="title">
+  <h3>Dry density of soil by core cutter method</h3>
+</div>
+
+<div class="simsubscreen" id="canvas0">
+	<h4 class="incanvas" style="font-family:verdana;">Objective</h4>
+	<p class="incanvas" style="font-family:verdana; font-size:15px;">To determine the field or in-situ density of soil by the core cutter method.
+	</p></br>
+	<h4 class="incanvas" style="font-family:verdana; ">Apparatus used:</h4>
+	<p class="incanvas" style="font-family:verdana; font-size:14px;">Core cutter, Rammer, Weighing scale, Container etc.</p>
+	<span class="tooltip" style="border-bottom:1px dotted ; color:red; position:absolute; left:5px;top:120px;"><strong>Description</strong>
+	<span class="tooltiptext" style="text-align:justify;left:90px;top:2px;">The <strong style="color:red;">bulk density of soil </strong> can be defined as ratio of the weight of the soil to its corresponding volume and, it is also called in-situ density. It is expressed in g/cm<sup>3</sup>. Bulk density is needed for the determination of the safe bearing capacity of the soil for the purpose of stability analysis of slopes, settlement calculation and also to determine the pressure on the underlying strata. </span></span>
+	<img id="" style="position: absolute; left: 200px; top: 280px;" title="table" src="images/table.png">
+	<img id="" style="position: absolute; left: 270px; top: 280px; width:75px; height:150px;" title="Container" src="images/cap.svg" />
+	<img id="" style="position: absolute; left: 270px; top: 230px; width:80px; height:100px;" title="Rammer" src="images/d.png" />
+	<img id="" style="position: absolute; left: 390px; top:290px; height:90px;" title="Core cutter" src="images/11.png" />
+	<img id="" style="position: absolute; left: 510px; top: 285px; width:130px;" title="Weighing scale" src="images/wm2.png" />
+	<img style="position:absolute; left:20px; top:160px;" title="" src="images/human.png" />
+</div>
+
+<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+	<strong id="titlestep" class="incanvas">STEP </strong>
+	<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+	<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Measure the height and the diameter of the core cutter to calculate the volume of the core cutter.</p>
+	<img id="a21" style="position: absolute; left: 120px; top: 170px; width:30px; " title="Scale" src="images/scale.svg" />
+	<img id="a11" style="position: absolute; left: 250px; top: 300px;" title="core cutter" src="images/11.png" />
+	<p id="can1" style="position:absolute;top: 440px; left:28px; font-family:verdana; font-size:14px;">Internal Height of the core cutter, D = _____ cm</p>
+	<p id="can11" style="position:absolute;top: 470px; left:28px; font-family:verdana; font-size:14px;">Internal Diameter of the core cutter, H = _____ cm</p>
+	<p id="cann" style="position:absolute;top: 470px; left:28px; font-family:verdana; font-size:14px;visibility:hidden;">Volume of the core cutter = _____ cm<sup>3</sup></p>
+	<div id="cap1" style="position: absolute;top:180px;left:27px;visibility: hidden;">Volume of the core cutter =&nbsp;<span  class="frac"><sup>&pi;(D<sup>2</sup>)</sup><span>&frasl;</span><sub>4</sub></span>*<span>H</span> </div>
+	<div id="cap2"style="position: absolute;top:242.5px;left:213px;visibility:hidden;"> =&nbsp;<span  class="frac"><sup>&pi;(130<sup>2</sup>)</sup><span>&frasl;</span><sub>4</sub></span>*<span>100</span> </div>
+	<p id="can3" style="position:absolute;top: 300px; left:28px; font-family:verdana; font-size:14px;visibility:hidden;">Volume of the core cutter =</p>
+	<input id="tx" type="text" onfocus="this.value=''" style=" border:none; border-bottom-style:double;position:absolute;left:235px;top:315px;visibility:hidden;width:60px;" autocomplete="off" required>
+	<p id="q" style="position:absolute;left:310px;top:305px;visibility:hidden;">cc</p>
+	<input id="ch" type="button" style="border-bottom:1px solid black;position:absolute;left:235px;top:380px;visibility:hidden;" value="check">
+	<input id="re" type="button" style="border-bottom: 1px solid black; position: absolute; left: 290px; top: 380px; visibility: hidden;" value="Result">
+	<p id="r1" style="position:absolute; left:335px; top:290px; color:#32CD32; visibility:hidden;  font-size:22px;">&#10004;</p>
+	<p id="w1" style="position:absolute; left: 335px; top: 290px; color: red; visibility: hidden; font-size: 22px;">&#10008; </p>
+	<img id="1-2" src="images/vc1.png" style="position:absolute; left:231.5px; top:100px; width:55%;visibility: hidden;">
+	<img id="1-3" src="images/vc2.png" style="position:absolute; left:350px; top:100px; width:15%; cursor:pointer;visibility: hidden;">
+</div>
+
+<div class="simsubscreen" id="canvas2" style="visibility: hidden">
+	<strong id="titlestep2" class="incanvas">STEP </strong>
+	<span class="circlebg" id="stepnumber2">&nbsp;2&nbsp;</span>
+	<p id="pumptext2" class="steptext" style="font-family:verdana; font-size:14px;">Measure the weight of the core cutter by using weighing balance.</p>
+	<img id="1-0" style="position: absolute; left: 430px; top: 255px;" title="Weighing scale" src="images/wm1.png" />
+	<img id="1-1" style="position:absolute; left:490px; top:375px;" src="images/on.png">
+	<p id="p1-1" style="position:absolute; left:540px; top:332px;"></p>
+	<img id="1-4" style="position:absolute; left:593px; top:375px;" src="images/tare.png">
+	<img id="a12" style="position: absolute; left: 200px; top: 305px;" title="core cutter" src="images/11.png" />
+	<p id="can12" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;">Weight of the core cutter (W<sub>1</sub>) = _____ g</p>
+	<p id="v12" style="position:absolute;left: 550px; top:332px;font-family:verdana; font-size:14px;"></p>
+</div>
+
+<div class="simsubscreen" id="canvas3" style="visibility: hidden">
+   <strong id="titlestep3" class="incanvas">STEP </strong>
+   <span class="circlebg" id="stepnumber3">&nbsp;3&nbsp;</span>
+   <p id="pumptext3" class="steptext" style="font-family:verdana; font-size:14px;">Clean and level the soil to be tested and place the core cutter over it.</p>
+   <img id="a31" style="position: absolute; left: 225px; top: 172px; width: 89px; height: 132px; visibility: hidden" title=" Dolly" src="images/mould.png">
+   <img id="a19" style="position: absolute; left: 220px; top: 165px;width:370px;" title="soil" src="images/box.jpg" />
+   <img id="a20" style="position: absolute; left: 330px; top: 250px;width:140px;visibility:hidden;" title="soil" src="images/box1.jpg" />
+   <img id="aw" style="position: absolute; left: 330px; top: 250px;width:140px;visibility:hidden;" title="soil" src="images/box3.png" />
+   <img id="t21" style="position: absolute; left: 410px; top: 200px;width:120px;transform:rotate(310deg)" title="Trowel" src="images/trowel3.png" />
+   <img id="a10" style="position: absolute; left: 55px; top: 340px; width:450px; height:150px;visibility:hidden;" title="Grass" src="images/GR.png" />
+   <img id="t" style="position: absolute; left: 30px; top: 400px; width:500px; height:150px;visibility:hidden;" title="soil surface" src="images/M.png" />
+</div>
+
+<div class="simsubscreen" id="canvas4" style="visibility: hidden">
+   <strong id="titlestep4" class="incanvas">STEP</strong>
+   <span class="circlebg" id="stepnumber4">&nbsp;4&nbsp;</span>
+   <p id="pumptext4" class="steptext" style="font-family:verdana; font-size:14px;">Fix the Rammer on the core cutter. </p>
+   <img id="" style="position: absolute; left: 240px; top: 330px;width:70px;" title="core cutter" src="images/11.png" />
+   <img id="" style="position: absolute; left: 243px;width:64px; top: 312px;height:70px; " title=" Dolly" src="images/cap.svg">
+   <img id="a10" style="position: absolute; left: 55px; top: 340px; width:450px; height:150px;" title="Grass" src="images/GR.png" />
+   <img id="" style="position: absolute; left: 30px; top: 400px; width:500px; height:150px;" title="soil surface" src="images/M.png" />
+   <img id="a23" style="position: absolute; left: 238px; top: 80px;width:70px;" title="Rammer" src="images/6.png" />
+</div>
+
+<div class="simsubscreen" id="canvas5" style="visibility: hidden">
+    <strong id="titlestep5" class="incanvas">STEP </strong>
+    <span class="circlebg" id="stepnumber5">&nbsp;4&nbsp;</span>
+    <p id="pumptext5" class="steptext" style="font-family:verdana; font-size:14px;">Start pressing the core cutter in the soil using Rammer.</p>
+    <img id="ac" style="position: absolute; left: 169.5px; top: 310px;width:78px; " title="core" src="images/mould.png">
+    <img id="a16" style="position: absolute; left: 30px; top: 325px; width:370px; height:130px;" title="Grass" src="images/GR.png" />
+    <img id="n" style="position: absolute; left: 10px; top: 385px; width:400px; height:150px;" title="soil surface" src="images/M.png" />
+    <img id="ah" style="position: absolute; left: 173px; top: 148px;width:70px;" title="Rammer" src="images/6.png" />
+	<img id="a191" style="position: absolute; left: 440px; top: 190px; visibility:hidden;" title="Grass" src="images/box.jpg" />
+	<img id="a201" style="position: absolute; left: 530px; top: 250px;width:100px;visibility:hidden;" title="soil" src="images/box2.jpg" />
+	<p id="text5">
+</div>
+
+<div class="simsubscreen" id="canvas6" style="visibility: hidden">
+    <strong id="titlestep6" class="incanvas">STEP </strong>
+    <span class="circlebg" id="stepnumber6">&nbsp;5&nbsp;</span>
+    <!-- <p id="pumptext6" class="steptext" style="font-family:verdana; font-size:14px;">Remove the Rammer and the soil sample on the sides of the core cutter.</p> -->
+    <p id="pumptext6" class="steptext" style="font-family:verdana; font-size:14px;">Remove the core cutter from the soil carefully without disturbing the sample inside the core cutter</p>
+    <img id="a10" style="position: absolute; left: 55px; top: 340px; width:450px; height:150px;" title="Grass" src="images/GR.png" />
+	<img id="aco1" style="position: absolute; left: 236px; top: 363px; width:78px;" title=" Dolly" src="images/mould.png">
+	<img id="ah1" style="position: absolute; left: 240px; top:205px;width:70px;" title="Rammer" src="images/6.png" />
+	<img id="" style="position: absolute; left: 30px; top: 400px; width:500px; height:150px;" title="soil surface" src="images/M.png" />
+</div>
+
+<div class="simsubscreen" id="canvas7" style="visibility: hidden">
+	<strong id="titlestep7" class="incanvas">STEP </strong>
+	<span class="circlebg" id="stepnumber7">&nbsp;6&nbsp;</span>
+	<p id="pumptext7" class="steptext" style="font-family:verdana; font-size:14px;">Measure the weight of the soil in the core cutter.</p>
+	<img id="2-0" style="position: absolute; left: 430px; top: 255px;" title="Weighing scale" src="images/wm1.png" />
+	<img id="a26" style="position: absolute; left: 205px; top: 285px;" title="core cutter with soil" src="images/G.png" />
+	<img id="a62" style="position: absolute; left: 210px; top: 247.5px; height:120px;width:88px;" title=" coller" src="images/cap.svg">
+	<p id="v21" style="position:absolute;left: 540px; top:332px;font-family:verdana; font-size:14px;"></p>
+	<p id="can01" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;visibility:hidden;">Weight of the empty container, (w<sub>1</sub>) = _____ g</p>
+	<p id="v01" style="position:absolute;left: 500px; top:315px;font-family:verdana; font-size:14px;visibility:hidden;"></p>
+	<img id="2-1" style="position:absolute; left:490px; top:375px;" src="images/on.png">
+	<p id="p2-1" style="position:absolute; left:540px; top:332px;"></p>
+	<img id="2-4" style="position:absolute; left:593px; top:375px;" src="images/tare.png">
+</div>
+
+<div class="simsubscreen" id="canvas8" style="visibility: hidden">
+    <h3 style="position:absolute; left:-45px; top:-10px;">&nbsp;Observations:</h3>
+    <table style="position:absolute; left:-35px; top:40px; border:1px solid black; font-size:14px;  text-align:left;">
+        <tr>
+          <td style="border:1px solid black; padding:5px;">Trial No.</td>
+          <td id="t1" style="border:1px solid black; padding:10px;">1</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:5px;">Weight of core cutter, (W<sub>1</sub>)</td>
+          <td id="t2" style="border:1px solid black; padding:10px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:5px;">Weight of core cutter + soil, (W<sub>2</sub>)</td>
+          <td id="t3" style="border:1px solid black; padding:10px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:5px;">Weight of soil, (W)=(W<sub>2</sub>-W<sub>1</sub>)</td>
+          <td id="t4" style="border:1px solid black; padding:10px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:5px;">Volume of soil, (V)</td>
+          <td id="t5" style="border:1px solid black; padding:10px;"></td>
+        </tr>
+    </table>
+
+    <h3 style="position:absolute; left:0px; top:250px;">&nbsp;Calculations:</h3>
+    <table style="position:absolute; left:0px; top:290px;  font-size:14px;  text-align:left;">
+        <tr>
+            <td style="padding:5px;">Bulk density, <sup>&rho;</sup><sub>b</sub> =</td>
+            <td id="" style="padding:10px;">
+				<span class="frac"><sup>W</sup><span>&frasl;</span><sub>V</sub></span> =
+				<input id="wd" type="text" style=" border:none; border-bottom-style:double; width:55px;" required> g/cc
+				<span id="mark1" style="font-size:22px; visibility:hidden;"></span>
+			</td>
+        </tr>
+        <tr>
+			<td style="padding:5px;"></td>
+			<td id="" style="padding:15px;">
+				<input id="chk1" class="clsBtn" type="button" name="check" value="Check" />
+				<input id="res1" class="clsBtn" type="button" name="Formula" value="Result" disabled />
+			</td>
+        </tr>
+	</table>
+</div>
+
+<div class="simsubscreen" id="canvas9" style="visibility: hidden">
+    <strong id="titlestep7" class="incanvas">STEP </strong>
+    <span class="circlebg" id="stepnumber7">&nbsp;7&nbsp;</span>
+    <p id="pumptext7" class="steptext" style="font-family:verdana; font-size:14px;">Calculate the weight of the empty container.</p>
+    <img id="3-0" style="position: absolute; left: 430px; top: 255px;visibility: hidden; background-color:lightgrey;" title="Weighing scale" src="images/wm1.png" />
+	<p id="can21" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;">Weight of the soil in the core cutter is (W<sub>2</sub>) = _____ g</p>
+    <p id="v22" style="position:absolute;left: 550px; top:332px;font-family:verdana; font-size:14px; "></p>
+	<img id="b01" style="position: absolute; left: 200px; top: 355px; visibility:hidden;" title="container" src="images/bowl1.png" />
+    <p id="can01" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;visibility:hidden;">Weight of the empty container is (w<sub>1</sub>) = _____ g</p>
+    <p id="v01" style="position:absolute;left: 500px; top:315px;font-family:verdana; font-size:14px;visibility:hidden;"></p>
+    <p id="p3-1" style="position:absolute; left:540px; top:332px;">000.01</p>
+    <img id="3-4" style="position:absolute; left:593px; top:375px;visibility: hidden;" src="images/tare.png">
+</div>
+
+<div class="simsubscreen" id="canvas10" style="visibility: hidden">
+    <strong id="titlestep81" class="incanvas">STEP </strong>
+    <span class="circlebg" id="stepnumber81">&nbsp;8&nbsp;</span>
+    <p id="pumptext81" class="steptext" style="font-family:verdana; font-size:14px;">Remove the soil from the core cutter. Take a sample of the wet soil in the container and measure its weight.</p>
+    <img id="p1" style="position: absolute; left: 155px; top: 320px;width:180px;visibility:hidden;" title="Weighing scale" src="images/plate.png" />
+    <img id="p2" style="position: absolute; left: 155px; top: 320px;width:180px;visibility:hidden;" title="plate" src="images/plate1.png" />
+    <img id="p3" style="position: absolute; left: 155px; top: 320px;width:180px;visibility:hidden;" title="plate" src="images/plate2.png" />
+	<img id="b1" style="position: absolute; left: 60px; top: 320px;visibility:hidden;" title="container"  src="images/bowl1.png" />
+	<img id="b2" style="position: absolute; left: 60px; top: 320px;visibility:hidden;" title=" container with soil" src="images/bowl2.png" />
+	<img id="tr1" style="position: absolute; left: 350px; top: 320px; width:120px; visibility:hidden;" title="Trowel" src="images/trowel1.png" />
+	<img id="tr2" style="position: absolute; left: 230px; top: 270px; width:120px;visibility:hidden;" title="Trowel" src="images/trowel12.png" />
+	<img id="s1" style="position: absolute; left: 480px; top: 255px;visibility: hidden;" title="core with soil" src="images/G.png" />
+    <img id="4-0" style="position: absolute; left: 430px; top: 255px;visibility:hidden; background-color:lightgrey; " title="Weighing scale" src="images/wm1.png" />
+    <p id="p4-1" style="position:absolute; left:540px; top:332px;"></p>
+    <img id="4-4" style="position:absolute; left:593px; top:375px;visibility: hidden;" src="images/tare.png" />
+    <p id="v23" style="position:absolute;left: 550px; top:332px;font-family:verdana; font-size:14px;"></p>
+    <img id="b02" style="position: absolute; left: 200px; top: 350px;visibility:hidden;" title="container" src="images/bowl2.png" />
+    <p id="can02"  style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;visibility:hidden;">Weight of the container with wet soil is (w<sub>2</sub>) = _____g</p>
+	<p id="v02" style="position:absolute;left: 500px; top:315px;font-family:verdana; font-size:14px;visibility:hidden;"> </p>
+</div>
+
+<div class="simsubscreen" id="canvas11" style="visibility: hidden">
+    <strong id="titlestep8" class="incanvas">STEP </strong>
+    <span class="circlebg" id="stepnumber8">&nbsp;9&nbsp;</span>
+    <p id="pumptext8" class="steptext" style="font-family:verdana; font-size:14px;">Place the container with wet soil in the oven for 24 hours at 110&deg;C temperature.</p>
+    <img id="ad" style="position: absolute; left: 140px; top: 200px;width:190px;height:170px;visibility: hidden;" title="door" src="images/sq.png" />
+    <div id="13-12" style="position:absolute; left:116px; top:126px; width:40px; height:17.5px; background-color:#D3D3D3; font-weight:bold; font-size:14px;">&nbsp;25</div>
+    <img id="13-1" style="position:absolute; left:20px; top:100px; width:210px;" src="images/oven.png">
+    <div id="13-13" style="position:absolute; left:168px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Increase Temperature"></div>
+    <div id="13-14" style="position:absolute; left:192.5px; top:124px; width:20.25px; height:18.5px; background-color:transparent; font-weight:bold; font-size:14px; cursor:pointer;" title="Decrease Temperature"></div>
+    <img id="acu" style="position: absolute; left: 100px; top: 420px;visibility: hidden; " title="container" src="images/bowl2.png" />
+    <img id="auu" style="position: absolute; left: 100px; top: 180px;visibility: hidden; " title="container" src="images/bowl3.png" />
+    <div class="door" id="incDoor13-1" style="visibility:hidden; "></div>
+    <div class="door" id="incDoor13-2" style="visibility:hidden;"></div>
+    <div class="door" id="incDoor13-3" style="visibility:hidden;"></div>
+    <img id="13-11" style="position: absolute; left: 35px; top: 225px; cursor: pointer; visibility: hidden;" src="images/ovenknob.png" />
+    <div id="13-2" style="position:absolute; left:-50px; top:0px; width:750px; height:550px; background-color:white; visibility:hidden;"></div>
+	<h1 id="13-3" style="position:absolute;  left:225px; top:225px; color:grey; text-align:center; display:none;">After 24 hours</h1>
+	<h1 id="13-4" style="position:absolute;  left:105px; top:225px; color:grey; text-align:center; visibility: hidden;">Repeat the procedure from step 7 - 10</h1>
+</div>
+
+<div class="simsubscreen" id="canvas12" style="visibility: hidden">
+	<strong id="titlestep21" class="incanvas">STEP </strong>
+	<span class="circlebg" id="stepnumber21">&nbsp;10&nbsp;</span>
+	<p id="pumptext21" class="steptext" style="font-family:verdana; font-size:14px;">Measure the weight of the container with dry soil.</p>
+	<img id="5-0" style="position: absolute; left: 430px; top: 255px; background-color:lightgrey;" title="Weighing scale" src="images/wm1.png" />
+	<img id="b" style="position: absolute; left: 200px; top: 355px;" title="container with soil" src="images/bowl3.png" />
+	<p id="can14" style="position:absolute;top: 450px; left:28px; font-family:verdana; font-size:14px;">Weight of the container with the dry soil (w<sub>3</sub>) = _____ g</p>
+	<p id="v14" style="position:absolute;left: 535px; top:332px;font-family:verdana; font-size:14px;"></p>
+	<p id="p5-1" style="position:absolute; left:540px; top:332px;">000.01</p>
+	<img id="5-4" style="position:absolute; left:593px; top:375px;visibility: hidden;" src="images/tare.png" />
+</div>
+
+<div class="simsubscreen" id="canvas13" style="visibility: hidden">
+    <h3 style="position:absolute; left:-45px; top:-10px;">&nbsp;Observations:</h3>
+    <table style="position:absolute; left:-35px; top:40px; border:1px solid black; font-size:14px;  text-align:left;">
+        <tr>
+          <td style="border:1px solid black; padding:10px;">Container number</td>
+          <td id="k1" style="border:1px solid black; padding:5px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:10px;">Weight of container, w<sub>1</sub></td>
+          <td id="k2" style="border:1px solid black; padding:5px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:10px;">Weight of container + wet soil, w<sub>2</sub></td>
+          <td id="k3" style="border:1px solid black; padding:5px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:10px;">Weight of container + dry soil, w<sub>3</sub></td>
+          <td id="k4" style="border:1px solid black; padding:5px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:10px;">Weight of water, w<sub>w</sub>=w<sub>2</sub>-w<sub>3</sub>
+          </td>
+          <td id="k5" style="border:1px solid black; padding:5px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:10px;">Weight of dry soil, w<sub>s</sub>=w<sub>3</sub>-w<sub>1</sub>
+          </td>
+          <td id="k6" style="border:1px solid black; padding:5px;"></td>
+        </tr>
+        <tr>
+          <td style="border:1px solid black; padding:10px;">Weight of wet soil, &rho;<sub>b</sub>
+          </td>
+          <td id="k7" style="border:1px solid black; padding:5px;"></td>
+        </tr>
+    </table>
+
+    <h3 style="position:absolute; left:360px; top:-10px;">&nbsp;Calculations:</h3>
+    <table style="position:absolute; left:370px; top:50px;  font-size:14px;  text-align:left;">
+        <tr>
+            <td style="padding:5px;text-align:right;">Water content, W =</td>
+            <td id="" style="padding:10px;"><span class="frac"><sup>w<sub>2</sub>-w<sub>3</sub></sup><span>&frasl;</span><sub>w<sub>3</sub>-w<sub>1</sub></sub></span>  x 100</td>
+        </tr>
+        <tr>
+            <td style="padding:5px; text-align:right;">=</td>
+            <td id="" style="padding:10px;">
+                <input id="wd1" type="text" style=" border:none; border-bottom-style:double; width:55px;" required>&#37;
+                <span id="mak1" style="font-size:22px; visibility:hidden;"></span>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:5px; "></td>
+            <td id="" style="padding:10px;">
+				<input id="ch1" class="clsBtn" type="button" name="check" value="Check" />
+				<input id="re1" class="clsBtn" type="button" name="Formula" value="Result" disabled />
+			</td>
+        </tr>
+        <tr>
+			<td style="padding:5px;text-align:right;">Dry Density, <sup>&rho;</sup><sub>dry</sub> =</td>
+			<td id="" style="padding:10px; ">
+				<span class="frac"><sup><sup>&rho;</sup><sub>b</sub></sup><span>&frasl;</span><sub>1+W</sub></span> =
+				<input id="wc1" type="text" style=" border:none; border-bottom-style:double; width:55px;" required>g/cc
+				<span id="mak2" style="font-size:22px; visibility:hidden;"></span>
+			</td>
+        </tr>
+        <tr>
+			<td style="padding:5px;"></td>
+			<td id="" style="padding:10px;">
+				<input id="ch2" class="clsBtn" type="button" name="check" value="Check" />
+				<input id="re2" class="clsBtn" type="button" name="Formula" value="Result" disabled />
+			</td>
+        </tr>
+    </table>
+    <div id="sheet1" style="position:absolute; left:377px; top:222px; width:350px; height:175px; background-color:#ffffff;visibility: hidden;"> </div>
+</div>
+
+<div class="simsubscreen" id="canvas14" style="visibility:hidden;">
+    <div id="13-5" style="position:absolute; left:-50px; top:0px; width:760px; height:550px; background-color:white; visibility:hidden;"> </div>
+    <h1 id="13-51" style="position:absolute;  left:55px; top:225px; color:grey; text-align:center; visibility: hidden;">Repeat the procedure from step 8 - 11</h1>
+    <h3 style="position:absolute; left:-50px; top:10px;">&nbsp;Result:</h3>
+    <table id="dataTable" border size=1 style="position:absolute; left:-40px; top:70px; font-size:12px; text-align:center;">
+        <tr>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">Trial No.</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">Weight of Core cuttter + soil, W<sub>1</sub> (g)</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">Weight of soil, M (g) </td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">Volume of soil, V (cm<sup>3</sup>)</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">
+				<span class="TTText"> Bulk density, &rho;<sub>b</sub> (g/cc)
+					<span  class="TTFormula" style="font-size:14px;">&rho;<sub>b</sub> =
+						<span class="frac"><sup>M</sup><span>&frasl;</span><sub>V</sub></span>
+					</span>
+				</span>
+			</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">Weight of empty container, w<sub>1</sub> (g)</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">Weight of empty container + Bulk soil, w<sub>2</sub> (g)</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">Weight of empty container + dry soil, w<sub>3</sub> (g)</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">
+				<span class="TTText"> Moisture content,
+					<span  class="TTFormula" style="font-size:12px;">W =
+						<span class="frac"><sup>w<sub>2</sub>-w<sub>3</sub></sup><span>&frasl;</span><sub>w<sub>3</sub>-w<sub>1</sub></sub></span> &#37;
+					</span>
+				</span>
+			</td>
+			<td style="text-align:center; font-family:verdana; font-size:12px; padding: 5px;">
+				<span class="TTText"> Dry Density, &rho;<sub>dry</sub> (g/cc)
+					<span  class="TTFormula" style="font-size:14px;">&rho;<sub>dry</sub> =
+						<span class="frac"><sup><sup>&rho;</sup><sub>b</sub></sup><span>&frasl;</span><sub>1+W</sub></span>
+					</span>
+				</span>
+			</td>
+		</tr>
+    </table>
+    <div style="position:absolute; top:250px; left:-40px;"> <strong class="incanvas" ><h3>Inference:</h3> </strong> </div>
+    <p id="l1" style="font-size:14px;position:absolute;top:310px;left:-40px;">By observing the result from the experiment the type of soil is found to be heavy clay soil.</p>
+</div>
+
+<div id="questD" style="position:absolute; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden; text-align:justify;">
+    <p id="qu"></p><select id="answer"></select>
+    <p id="a"></p>
+</div>
+
+<div id=""><p id="trial" style="text-transform: uppercase;visibility :hidden; font-weight: bold;font-family:verdana; font-size:14px;"><strong>Trial = </strong></p></div>
+<div id="nav"><img id="nextButton" onclick="navNext(); " src="images/Next.png" /></div>
+<img class="" id="arrow1" style="visibility:hidden" src="images/arrow1.png" />
+<div id="copyright"> &copy; 2020 - <script>document.write(new Date().getFullYear())</script> SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+</body>
+</html>

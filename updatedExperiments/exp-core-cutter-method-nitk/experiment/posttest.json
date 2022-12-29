@@ -1,0 +1,86 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The core cutter method is only suitable for fine-grained soil.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "explanations": {
+        "a": "Correct answer. The soil suitable for the core cutter method is fine grained soil. Hence the given sentence is true.",
+        "b": "The fine grained soil is the most suitable soil for conducting the core cutter method. Hence the given sentence is true."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Height of the core cutter used in the experiment is ______.",
+      "answers": {
+        "a": "15cm",
+        "b": "16cm",
+        "c": "13cm",
+        "d": "17cm"
+      },
+      "explanations": {
+        "a": "The height of the core cutter used in the experiment is less than 15cm.",
+        "b": "The height of the core cutter used in the experiment is less than 16cm.",
+        "c": "Correct answer. The height of core cutter used is 13cm.",
+        "d": "The core cutter height is not 17cm."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "High percentage of voids in soil sample indicates ________ compaction of soil.",
+      "answers": {
+        "a": "Good",
+        "b": "Poor",
+        "c": "Moderate",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "The percentage of voids in soil is high; it does not indicate as good compaction of soil.",
+        "b": "Correct answer. The  Compaction is the process of removing air voids in soil. Hence the presence of a high percentage of voids indicate that compaction of soil is poor.",
+        "c": "The compaction of soil is not moderate if the percentage of voids in soil is high.",
+        "d": "The correct answer is that a high percentage of voids in soil samples indicates poor compaction of soil. As one of the option given above is correct, option 'none of the above' is incorrect."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "The optimal moisture content is ______.",
+      "answers": {
+        "a": "20 to 24",
+        "b": "15 to 20",
+        "c": "12 to 15",
+        "d": "5 to 12"
+      },
+      "explanations": {
+        "a": "The optimal moisture content in core cutter method is does not range from 20 to 24.",
+        "b": "The optimal moisture content in core cutter method is does not range from 15 to 20.",
+        "c": "The optimal moisture content in core cutter method is does not range from 12 to 15.",
+        "d": "Correct answer. The optimal moisture content in core cutter method ranges from 5 to 12."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Density ratio is defined as _________________________________.",
+      "answers": {
+        "a": "Dry density to field density",
+        "b": "Maximum dry density to percentage ratio of dry density of soil",
+        "c": "Percentage ratio of dry density of soil to the maximum dry density",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "The density ratio is not defined as dry density to field density.",
+        "b": "Maximum dry density to percentage ratio of dry density of soil is not considered as density ratio.",
+        "c": "Correct answer. Density ratio is defined as percentage ratio of dry density of soil to the maximum dry density.",
+        "d": "In the provided options, percentage ratio of dry density of soil to the maximum dry density is correct. As one of the option given above is correct, option 'none of the above' is incorrect."
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    }
+  ]
+}

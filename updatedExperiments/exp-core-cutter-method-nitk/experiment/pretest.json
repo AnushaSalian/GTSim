@@ -1,0 +1,86 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "The method which is not suitable for the determination of In-situ density of natural soil is ________ .",
+      "answers": {
+        "a": "Sand replacement",
+        "b": "Oven dry",
+        "c": "Core cutter",
+        "d": "Displacement of water"
+      },
+      "explanations": {
+        "a": "Sand replacement is the In-situ determination of density of soil which uses a sand pouring cylinder.",
+        "b": "Correct answer. Oven dry is not in-situ determination of soil. The soil needs to be kept in the oven which requires a laboratory.",
+        "c": "Core cutter is a method used to determine the field density without disturbing the soil.",
+        "d": "Displacement of water method is used for determination of field density of soil and rock."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Core cutter method is suitable for _____.",
+      "answers": {
+        "a": "Soft soil",
+        "b": "Hard soil",
+        "c": "Cohesive soil",
+        "d": "Adhesive soil"
+      },
+      "explanations": {
+        "a": "Core cutter  method is suitable for soft, clayey,silt, fine grained soil, since it requires an undisturbed soil sample.",
+        "b": "Core cutter method is not suitable for hard soil as it involves hammering the steel cylinder to the ground.",
+        "c": "Correct answer. Cohesive soil has a good binding property, which makes it possible to extract soil from fields. Hence cohesive soil is suitable for the core cutter method.",
+        "d": "Core cutter method is not suitable for adhesive soil since it requires undisturbed soil."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "The soil dry density can be defined as ",
+      "answers": {
+        "a": "The ratio of the weight of soil to the volume of soil",
+        "b": "The ratio of the weight of solids to volume of soil",
+        "c": "The ratio of unit weight of soil to unit weight of water",
+        "d": "None of the above"
+      },
+      "explanations": {
+        "a": "Correct answer. Since the soil is dry, it will be in the ratio of weight of soil to the volume of soil.",
+        "b": "Soil dry density is not the ratio of weight of solids, it is the weight and volume of soil.",
+        "c": "The ratio is not in unit weight, it is weight and volume of soil.",
+        "d": "The correct answer is 'The ratio of the weight of soil to the volume of soil'. As one of the option given above is correct, option 'none of the above' is incorrect."
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "The core cutter method of determining the dry density of  soil is the in-situ test.",
+      "answers": {
+        "a": "False",
+        "b": "True"
+      },
+      "explanations": {
+        "a": "To find the in-situ density of soil core cutter method is most suitable. Hence the given sentence is true.",
+        "b": "Correct answer. The core method is used for determination of dry density in-situ test. Hence the given sentence is true."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "The codebook referred for conducting the core cutter method is",
+      "answers": {
+        "a": "IS : 2720 part 28 1975",
+        "b": "IS : 2720 part 27 1975",
+        "c": "IS : 2720 part 26 1975",
+        "d": "IS : 2720 part 29 1975"
+      },
+      "explanations": {
+        "a": "IS : 2720 part 28 1975 deals with the determination of soil by sand replacement.",
+        "b": "IS : 2720 part 27 1975 deals with the method for determination of total soluble sulphates in soil.",
+        "c": "IS : 2720 part 26 1975 This part covers the method for determination of pH value. The acidic and alkalinity of soil can be quantitatively expressed.",
+        "d": "Correct answer. IS : 2720 part 29 1975 deals with the determination of dry density of soil in place by core cutter method."
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    }
+  ]
+}
