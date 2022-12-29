@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SOLVE</title>
+<script type="text/javascript" src="js/jquerymin.js"></script>
+<script type="text/javascript" src= "js/ej.web.all.js"></script> 
+<link rel="stylesheet" href="css/liquid.css" />
+</title>
+<body style="margin:0; font-family:verdana;">
+<div id="simscreen">
+<div id="title"><h3>LIQUID LIMIT TEST</h3></div>
+	<center><h2 id="step16" style="font-family:verdana; ">Characteristic Curves<h2></center></p>
+	<p id="g1" style="position:absolute; left:200px; top:100px; border:1px solid black; cursor:pointer; padding:2.5px; cursor:pointer;">Ammonia - Nitrogen Concentration v/s Absorbance</p>
+	<div id="chartContainer" style="height:380px; width:600px; margin-left:70px; margin-right:100px; margin-top:70px"></div>
+	<p id="p16-1" style="position:absolute; left:150px; top:530px; font-size:14px;">Ammonia - Nitrogen Concentration of water sample = 0.865 mg/l</p>
+</div>
+<script>
+$("#chartContainer").ejChart(
+        {
+		    primaryXAxis:
+            {
+			   	labelFormat: "{value}",
+                title: { text: 'Ammonia - Nitrogen Concentration (mg/l)' },
+                range: { min:0, max: 1.2, interval: 0.2 }
+            },	
+			primaryYAxis:
+            {
+				labelFormat: "{value}",
+                title: { text: 'Absorbance' },
+                range: { min: 0, max: 0.2, interval:0.04 }				
+            },	
+			series: 
+			[
+			    {
+                points: [
+					{y: 0.0333, x: 0.2},
+					{y: 0.0697, x: 0.4},
+					{y: 0.1082, x: 0.6},
+					{y: 0.1458, x: 0.8},
+					{y: 0.1813, x: 1}
+				],
+				type: 'line',
+				fill: "#0066FF",
+				name : 'Ammonia - Nitrogen Concentration v/s Absorbance',
+				border :{width:5},
+				tooltip:{visible:true},
+				marker:{
+					shape: 'circle',
+					size:
+					{
+						height: 5, width: 5
+					},
+					visible: true
+				},					
+				enableAnimation :true
+                }
+				<!-- , -->
+				<!-- { -->
+					<!-- points: [ -->
+					
+					<!-- { x: dataset[2][1], y: 0}, -->
+					<!-- { x: dataset[2][1], y: dataY[2] }, -->
+					<!-- { x: 0, y: dataY[2]} -->
+					
+					<!-- ], -->
+					<!-- type: 'line', -->
+					<!-- dashArray : '10,4', -->
+					<!-- name: 'Water content at N = 20', -->
+					<!-- fill: "#FF1493", -->
+					<!-- border :{width:5}, -->
+					<!-- tooltip:{visible:true}, -->
+					<!-- marker:{ -->
+                        <!-- shape: 'circle', -->
+						<!-- size: -->
+                        <!-- { -->
+                            <!-- height: 5, width: 5 -->
+                        <!-- }, -->
+                        <!-- visible: true -->
+                    <!-- },					 -->
+					<!-- enableAnimation :true -->
+                <!-- }, -->
+				<!-- { -->
+					<!-- points: [ -->
+					
+					<!-- { x: dataset[0][1], y: 0}, -->
+					<!-- { x: dataset[0][1], y: dataY[0] }, -->
+					<!-- { x: 0, y: dataY[0] } -->
+					
+					<!-- ], -->
+					<!-- type: 'line', -->
+					<!-- dashArray : '10,4', -->
+					<!-- name: 'Water content at N = 31', -->
+					<!-- fill: "#00FF00", -->
+					<!-- border :{width:5}, -->
+					<!-- tooltip:{visible:true}, -->
+					<!-- marker:{ -->
+                        <!-- shape: 'circle', -->
+						<!-- size: -->
+                        <!-- { -->
+                            <!-- height: 5, width: 5 -->
+                        <!-- }, -->
+                        <!-- visible: true -->
+                    <!-- },					 -->
+					<!-- enableAnimation :true -->
+                <!-- } -->
+				,
+				{
+					points: [
+					
+					{ x: 0.865, y: -0.5},
+					{ x: 0.865, y: 0.157 },
+					{ x: -0.5, y: 0.157}
+					
+					],
+					type: 'line',
+					dashArray : '12,4',
+					name: 'Water sample',
+					fill: "#FF1493",
+					border :{width:5},
+					tooltip:{visible:true},
+					marker:{
+                        shape: 'circle',
+						size:
+                        {
+                            height: 5, width: 5
+                        },
+                        visible: true
+                    },					
+					enableAnimation :true
+                }
+			],
+            load:"loadTheme",
+			isResponsive: true,
+			
+			legend:{visible:true}
+        });
+</script>
+</body>
+</html>
