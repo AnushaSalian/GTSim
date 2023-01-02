@@ -1,0 +1,715 @@
+#simscreen
+{
+	position:absolute;
+	left:0px;
+	top:0px;
+    width:800px;
+    height:600px;	
+	border:solid 1px;
+}
+#title{
+    position:relative;
+	left:0px;
+	top:-28px;
+	height:40px;
+	width:100%;
+	background-color:black;
+	font-size:24px;
+	text-align:center;
+	color:white;
+	text-transform:uppercase;
+}
+
+body {
+		overflow:hidden;
+ }
+
+.simsubscreen
+{
+	position:absolute;
+	left:34px;
+	top:49px;
+	height:530px;
+	width:745px;
+}
+.simsubscreen1
+{
+	position:absolute;
+	left:48px;
+	top:49px;
+	height:530px;
+	width:745px;
+}
+.simsubscreen2
+{
+	position:absolute;
+	left:54px;
+	top:-4px;
+	height:530px;
+	width:745px;
+}
+.simsubscreen3
+{
+	visibility: visible;
+	position:absolute;
+	left:48px;
+	top:49px;
+	height:530px;
+	width:745px;
+}
+.incanvas{
+    margin:5px 0 0 5px;
+	padding:0;
+
+}
+.incanvas1{
+    margin:5px 0 0 5px;
+	padding:0;
+	/* margin-top: 25px; */
+	top:150px;
+
+}
+
+#tooltip {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+    font-family: verdana;
+    font-size:14px;
+  }
+  #tooltip .tooltiptext {
+	font-family: verdana;
+	font-size:14px;
+    visibility: hidden;
+    width: 313px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 0px 20px 10px 15px;
+    position: absolute;
+    z-index: 100;
+	height: 90px;
+	
+    
+}
+#tooltip:hover .tooltiptext{
+	visibility: visible;
+}
+
+
+#nextButton
+{
+	position:absolute;
+	left:730px;
+	top:520px;
+	cursor:pointer;
+}
+#copyright{
+	position: absolute;
+	left:72px;
+	top: 580px;
+	font-size:12px
+}
+.circlebg
+{
+    position: absolute;
+    border-radius:100%;
+	font-size:25px;
+	color:#fff;
+	text-align:center;
+	background:#000;
+    left: 60px;
+    
+}
+.circlebg1
+{
+    position: absolute;
+    border-radius:100%;
+	font-size:24px;
+	color:#fff;
+	text-align:center;
+	background:#000;
+    left: 52px;
+    
+}
+.con{
+	top:20px;
+	margin-top: 0px;
+}
+
+.steptext
+{
+    position: absolute;
+	display:inline;
+	font-size:15px;
+    left: 104px;
+    top: -10px;
+}
+#table1{
+	position: absolute;
+	margin-top: 11px;
+	top: 20px;
+	border: 1px solid;
+	height: 31px;
+}
+#table2{
+	position: absolute;
+	margin-top: 11px;
+	top: 20px;
+	border: 1px solid;
+	height: 31px;
+}
+table{
+	border: 1px solid;
+    height: 50px;
+    width: 667px;
+    position: absolute;
+    top: 38px;
+    left: -74px;
+	font-size: 15px;
+	border-spacing: 0px;
+	
+	
+}
+
+tr,th,td{
+	border: 1px solid;
+	height: 24px;
+}
+tr,th,td{
+	border: 1px solid;
+	height: 18px;
+}
+@-webkit-keyframes moveScale
+{
+	from {left:280px; top:-8px;}
+	to {left:597px; top:58px;}
+}
+
+@keyframes moveScale
+{
+	from {left:280px; top:-8px;}
+	to {left:597px; top:58px;}
+}
+@-webkit-keyframes moveScale1
+{
+	from {left:19px; top:69px;}
+	to {left:263px; top:56px;}
+}
+
+@keyframes moveScale1
+{
+	from {left:19px; top:67px;}
+	to {left:263px; top:56px;}
+}
+
+@-webkit-keyframes moveTrowel
+{
+	from {left:-33px; top:55px;}
+	to {left:234px; top:209px;}
+}
+
+@keyframes moveTrowel
+{
+	from {left:-33px; top:55px;}
+	to {left:234px; top:209px;}
+}
+@-webkit-keyframes moveTrowel1
+{
+	from {left:0px; top:90px;}
+	to {left:320px; top:0px;}
+}
+
+@keyframes moveTrowel1
+{
+	from {left:0px; top:90px;}
+	to {left:300px; top:210px;}
+}
+@-webkit-keyframes tamp1
+{
+	0% {left:210px; top:67px;}
+	/* 7% {left:190px; top:50px;}
+	14% {left:190px; top:55px;}
+	21% {left:190px; top:60px;}
+	28% {left:190px; top:100px;}
+	35% {left:190px; top:90px;}
+	42% {left:190px; top:99px;}
+	49% {left:190px; top:91px;}
+	56% {left:190px; top:100px;}
+	63% {left:190px; top:87px;}
+	70% {left:190px; top:99px;}
+	77% {left:190px; top:86px;}
+	84% {left:200px; top:100px;}*/
+	50% {left:210px; top:150px;} 
+	100% {left:210px; top:50px;}
+}
+@keyframes tamp1
+{
+	0% {left:210px; top:67px;}
+	/* 7% {left:190px; top:50px;}
+	14% {left:190px; top:55px;}
+	21% {left:190px; top:60px;}
+	28% {left:190px; top:100px;}
+	35% {left:190px; top:90px;}
+	42% {left:190px; top:99px;}
+	49% {left:190px; top:91px;}
+	56% {left:190px; top:100px;}
+	63% {left:190px; top:87px;}
+	70% {left:190px; top:99px;}
+	77% {left:190px; top:86px;}
+	84% {left:200px; top:100px;}*/
+	50% {left:210px; top:150px;} 
+	100% {left:210px; top:50px;}
+}
+/* @-webkit-keyframes tamp1
+{
+	from {left:0px; top:90px;}
+	to {left:120px; top:0px;}
+}
+
+@keyframes tamp1
+{
+	from {left:0px; top:90px;}
+	to {left:120px; top:210px;}
+} */
+@-webkit-keyframes tamp
+{
+	0% {left:427px; top:180px;}
+	7% {left:429px; top:145px;}
+	14% {left:432px; top:140px;}
+	21% {left:436px; top:155px;}
+	28% {left:440px; top:155px;}
+	35% {left:445px; top:142px;}
+	42% {left:422px; top:144px;}
+	49% {left:425px; top:146px;}
+	56% {left:427px; top:150px;}
+	63% {left:430px; top:152px;}
+	70% {left:430px; top:152px;}
+	77% {left:425px; top:150px;}
+	84% {left:417px; top:152px;}
+	91% {left:420px; top:152px;}
+	100% {left:427px; top:140px;}
+}
+
+@keyframes tamp
+{
+	0% {left:427px; top:150px;}
+	7% {left:429px; top:145px;}
+	14% {left:432px; top:140px;}
+	21% {left:436px; top:155px;}
+	28% {left:440px; top:155px;}
+	35% {left:445px; top:142px;}
+	42% {left:422px; top:144px;}
+	49% {left:425px; top:146px;}
+	56% {left:427px; top:150px;}
+	63% {left:430px; top:152px;}
+	70% {left:430px; top:152px;}
+	77% {left:425px; top:150px;}
+	84% {left:417px; top:152px;}
+	91% {left:420px; top:152px;}
+	100% {left:427px; top:140px;}
+}
+
+@-webkit-keyframes moveBowl
+{
+	from {left:367px; top:24px;}
+	to {left:206px; top:74px;}
+}
+
+@keyframes moveBowl
+{
+	from {left:367px; top:24px;}
+	to {left:206px; top:74px;}
+}
+@-webkit-keyframes moveBowl1
+{
+	from {left:-63px; top:51px;}
+	to {left:119px; top:72px;}
+}
+
+@keyframes moveBowl1
+{
+	from {left:-63px; top:51px;}
+	to {left:119px; top:72px;}
+}
+@-webkit-keyframes mould
+{
+	from {left:6px; top:239px;}
+	to {left:334px; top:106px;}
+}
+
+@keyframes mould
+{
+	from {left:6px; top:239px;}
+	to {left:334px; top:106px;}
+}
+@-webkit-keyframes rod
+{
+	from {top:185px;}
+	to { top:180px;}
+}
+
+@keyframes rod
+{
+	from {top:185px;}
+	to { top:180px;}
+}
+@-webkit-keyframes Cap
+{
+	from {left:-20px; top:137px;}
+	to {left:154px; top:119px;}
+}
+
+@keyframes Cap
+{
+	from {left:-20px; top:137px;}
+	to {left:154px; top:119px;}
+}
+@-webkit-keyframes mouldCap
+{
+	from {left:299px; top:164px;}
+	to {left:104px; top:188px;}
+}
+
+@keyframes mouldCap
+{
+	from {left:299px; top:164px;}
+	to {left:104px; top:188px;}
+}
+@-webkit-keyframes measureScale
+{
+	ffrom {left:240px; top:0px;}
+	to {left:494px; top:56px;}
+}
+
+@keyframes measureScale
+{
+	from {left:240px; top:0px;}
+	to {left:494px; top:56px;}
+}
+@-webkit-keyframes measureScale1
+{
+	from {left:100px; top:90px;}
+	to {left:218px; top:25px;}
+}
+
+@keyframes measureScale1
+{
+	from {left:100px; top:90px;}
+	to {left:218px; top:25px;}
+}
+@-webkit-keyframes moveRing
+{
+	from {left:11px; top:184px;}
+	to {left:304px; top:96px;}
+}
+
+@keyframes moveRing
+{
+	from {left:11px; top:184px;}
+	to {left:304px; top:96px;}
+}
+/* @-webkit-keyframes moveRing
+{
+	from {left:11px; top:184px;}
+	to {left:390px; top:160px;}
+}
+
+@keyframes moveRing{
+	from {left:11px; top:184px;}
+	to {left:273px; top:115px;}
+} */
+@-webkit-keyframes moveSpecimen
+{
+	from {left:613px; top:222px;}
+	to {left:376px; top:229px;}
+}
+
+@keyframes moveSpecimen
+{
+	from {left:613px; top:222px;}
+	to {left:376px; top:229px;}
+}
+@-webkit-keyframes dialGauge
+{
+	from {left:19px; top:173px;}
+	to {left:286px; top:182px;}
+}
+
+@keyframes dialGauge
+{
+	from {left:19px; top:173px;}
+	to {left:286px; top:182px;}
+}
+
+/* @-webkit-keyframes upperPlate
+{
+	from {left:238px; top:46px;}
+	to {left:106px; top:112px;}
+}
+
+@keyframes upperPlate
+{
+	from {left:238px; top:46px;}
+	to {left:106px; top:112px;}
+} */
+ @-webkit-keyframes upperPlate
+{
+	from{ top:77px;}
+	to {top:107px;}
+}
+
+@keyframes upperPlate
+{
+	from{ top:77px;}
+	to {top:107px;}
+}
+@-webkit-keyframes mouldSet
+{
+	from {top:75px;}
+	to {top:193px;}
+}
+
+@keyframes mouldSet
+{
+	from { top:75px;}
+	to {top:193px;}
+}
+@-webkit-keyframes Gauge
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(323deg);}
+}
+
+@keyframes Gauge
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(323deg);}
+}
+@-webkit-keyframes Gauge1
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(323deg);}
+}
+
+@keyframes Gauge1
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(323deg);}
+}
+@-webkit-keyframes Trol
+{
+	0%{transform: rotate(0deg);}
+	/* 50% {transform:  rotate(90deg);} */
+	100% {transform:  rotate(360deg);}
+}
+
+@keyframes Trol
+{
+	0%{transform: rotate(0deg);}
+	/* 50% {transform:  rotate(90deg);} */
+	100% {transform:  rotate(360deg);}
+}
+@-webkit-keyframes spring
+{
+	from {top:298px;}
+	to {top:290px;}
+}
+
+@keyframes spring
+{
+	from {top:298px;}
+	to {top:290px;}
+}
+@-webkit-keyframes Gauge3
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(363deg);}
+}
+
+@keyframes Gauge3
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(363deg);}
+}
+@-webkit-keyframes Gauge4
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(363deg);}
+}
+
+@keyframes Gauge4
+{
+	from {transform: rotate(9deg);}
+	to {transform: rotate(363deg);}
+}
+#tooltips {
+    position: relative;
+    display: inline-block;
+    /* border-bottom: 1px dotted black; */
+    font-family: verdana;
+    font-size:14px;
+  }
+  #tooltip .tooltiptexts {
+	font-family: verdana;
+	font-size:14px;
+    visibility: hidden;
+    width: 301px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    z-index: 100;
+	height: 136px;
+	
+    
+}
+#tooltip:hover .tooltiptext{
+	visibility: visible;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 371px;
+    text-align: center;
+    padding: px 0;
+    background-color:black;
+	color:white;
+
+    /* Position the tooltip  */
+    position: absolute;
+    z-index: 1;
+	border:1px solid black;
+	    border-radius: 6px;
+}
+input[type=text]:title{
+	background-color: RED;
+}
+input[title]:hover::after {
+	content: attr(title);
+	position: absolute;
+	top: -100%;
+	left: 0;
+  }
+@-webkit-keyframes soilspecimen
+{
+	from {top:220px;}
+	to { top:168px;}
+}
+
+@keyframes soilspecimen
+{
+	from {top:220px;}
+	to { top:168px;}
+}
+#calcu{
+	top:25px;
+	left:25px;
+}
+
+#tab{
+	border: 1px solid;
+    height: 35px;
+    width: 377px;
+    position: absolute;
+    top: 77px;
+    left: -6px;
+	font-size: 14px;
+	border-spacing: 0px;
+	
+	/* border-collapse: collapse; */
+}
+
+tr,th,td{
+	border: 1px solid;
+	height: 12px;
+}
+#copy{
+	top:120px;
+	left:45px;
+}
+.frac{
+	position: absolute;
+
+}
+button {
+	display: inline-block;
+	border-radius: 0px;
+	text-align: center;
+	font-size: 16px;
+	padding: 4px;
+	width: 97px;
+	cursor: pointer;
+	margin: 46px;
+	margin-top: 37px;
+	margin-left: -70px;
+  }
+#graph1{
+	top:20px;
+	/* height: 20px;
+	width:20px; */
+}
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color:black;
+    color:white;
+    font-size: 15px;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: hidden;
+}
+[data-title] {
+    position: relative;
+}
+/* @-webkit-keyframes text
+{
+	from {left:-37px; left:37px;}
+	to {left:597px; left:180px;}
+}
+
+@keyframes text
+{
+	from {left:-37px; left:37px;}u
+	to {left:597px; left:180px;}
+} */
+/* @-webkit-keyframes text
+{
+	from {left:-37px;}
+	to { left:149px;}
+}
+
+@keyframes text
+{
+	from {left:-37px;}
+	to { left:149px;}
+} */
+@keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  visibility: hidden;
+	  opacity: 1;
+	}
+  }
